@@ -215,39 +215,13 @@ add_filter('admin_footer_text', 'remove_footer_admin');
 if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page(array(
-        'page_title' 	=> 'Пользовательские настройки темы',
+        'page_title' 	=> 'Настройки темы ГородОК',
         'menu_title'	=> 'Настройки темы',
-        'menu_slug' 	=> 'contacts-settings',
-        'parent_slug' => 'acf-options',
+        'menu_slug' 	=> 'theme-custom-settings',
         'capability'	=> 'edit_posts',
-        'redirect'		=> true
+        'redirect'		=> false
     ));
 
-}
-
-$settings = array(
-
-    /* (string) the options page title. Defaults to 'Options' */
-    'title' => __('Настройки темы ГородОК', 'acf'),
-
-    /* (string) the options page menu title. Defaults to 'Options' */
-    'menu' => __('Настройки темы', 'acf'),
-
-    /* (string) the options page url slug. Defaults to 'acf-options' */
-    'slug' => 'acf-options',
-
-    /* the capability needed to access this admin page. Defaults to 'edit_posts' */
-    'capability' => 'edit_posts',
-
-    /* an array of sub menu pages (strings or arrays). Defaults to an empty array */
-    'pages' => array()
-);
-
-function my_acf_options_page_settings( $settings )
-{
-    $settings['title'] = 'Пользовательские настройки темы';
-
-    return $settings;
 }
 
 add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
