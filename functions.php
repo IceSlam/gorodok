@@ -178,3 +178,76 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/* Custom logo in adminbar */
+
+function gorodok_custom_logo() {
+    echo '
+	<style type="text/css">
+	#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+	display:inline-block;
+	background-image: url(' . get_bloginfo('stylesheet_directory') . '/assets/img/logo.png) !important;
+	background-position: 0 0;
+	width:20px !important;
+	height: 20px !important;
+	color:rgba(0, 0, 0, 0);
+	-webkit-background-size: cover;
+	background-size: cover;
+	}
+	#wpadminbar #wp-admin-bar-wp-logo.hover > .ab-item .ab-icon {
+	background-position: center;
+	}
+	</style>
+';
+}
+add_action('wp_before_admin_bar_render', 'gorodok_custom_logo');
+
+/* Custom theme author in admin panel footer */
+
+function remove_footer_admin () {
+    echo '<p>Тема ';
+    echo wp_get_theme();
+    echo ' разработана <a href="https://iceslam.ru" target="_blank">IceSlam</a> в компании <a href="https://alianscompany.ru" target="_blank">Альянс+</a>. Работает на WordPress</p>';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');
+
+/* ACF Custom Theme settings page */
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+        'page_title' 	=> 'Пользовательские настройки темы',
+        'menu_title'	=> 'Настройки темы',
+        'menu_slug' 	=> 'contacts-settings',
+        'parent_slug' => 'acf-options',
+        'capability'	=> 'edit_posts',
+        'redirect'		=> true
+    ));
+
+}
+
+$settings = array(
+
+    /* (string) the options page title. Defaults to 'Options' */
+    'title' => __('Настройки темы ГородОК', 'acf'),
+
+    /* (string) the options page menu title. Defaults to 'Options' */
+    'menu' => __('Настройки темы', 'acf'),
+
+    /* (string) the options page url slug. Defaults to 'acf-options' */
+    'slug' => 'acf-options',
+
+    /* the capability needed to access this admin page. Defaults to 'edit_posts' */
+    'capability' => 'edit_posts',
+
+    /* an array of sub menu pages (strings or arrays). Defaults to an empty array */
+    'pages' => array()
+);
+
+function my_acf_options_page_settings( $settings )
+{
+    $settings['title'] = 'Пользовательские настройки темы';
+
+    return $settings;
+}
+
+add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
