@@ -5,27 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Продукт - ГородОк</title>
+    <title>Каталог продукции - ГородОк</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
-    <link href="./assets/css/fontawesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/mdb.min.css">
-    <link rel="stylesheet" href="./assets/css/uikit.min.css">
-    <link rel="stylesheet" href="./assets/css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="./assets/css/main.min.css">
-    <link rel="stylesheet" href="./assets/css/media.min.css">
-    <link rel="icon" href="./assets/img/logo.png">
-    <link rel="apple-touch-icon" href="./assets/img/logo.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <link rel="stylesheet" href="../css/uikit.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../css/main.min.css">
+    <link rel="stylesheet" href="../css/media.min.css">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="apple-touch-icon" href="../img/logo.png">
   </head>
 
-  <body id="body" class="category single">
+  <body id="body" class="category">
 
     <header id="is-header" class="is-header header">
       <nav id="navbar" class="is-navbar navbar navbar-expand-lg navbar-dark">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img
-                src="./assets/img/gorodok-navbar-logo.png"
+                src="../img/gorodok-navbar-logo.png"
                 alt=""
                 loading="lazy"
             />
@@ -35,7 +34,7 @@
           </a>
           <div class="is-navbar__contacts__item mob-top-phone-navbar">
             <p class="title">
-              <img src="./assets/img/phone.svg" alt="">
+              <img src="../img/phone.svg" alt="">
               Наш телефон
             </p>
             <div class="dropdown">
@@ -68,7 +67,7 @@
             <div class="is-navbar__contacts ms-auto d-flex">
               <div class="is-navbar__contacts__item">
                 <p class="title">
-                  <img src="./assets/img/map.svg" alt="">Адрес
+                  <img src="../img/map.svg" alt="">Адрес
                 </p>
                 <a href="" class="link">
                   Кызыл, Рабочая, 208
@@ -76,7 +75,7 @@
               </div>
               <div class="is-navbar__contacts__item">
                 <p class="title">
-                  <img src="./assets/img/email.svg" alt="">
+                  <img src="../img/email.svg" alt="">
                   Наша почта
                 </p>
                 <a href="mailto:info@gorodok17.ru" class="link">
@@ -85,7 +84,7 @@
               </div>
               <div class="is-navbar__contacts__item">
                 <p class="title">
-                  <img src="./assets/img/phone.svg" alt="">
+                  <img src="../img/phone.svg" alt="">
                   Наши телефоны
                 </p>
                 <div class="dropdown">
@@ -142,7 +141,7 @@
         <div class="container">
           <a class="navbar-brand" href="#">
             <img
-                src="./assets/img/gorodok-navbar-logo.png"
+                src="../img/gorodok-navbar-logo.png"
                 alt=""
                 loading="lazy"
             />
@@ -184,7 +183,7 @@
             <div class="is-navbar__contacts is-navbar-mobile__contacts ms-auto d-flex">
               <div class="is-navbar__contacts__item is-navbar-mobile__contacts__item">
                 <p class="title">
-                  <img src="./assets/img/map.svg" alt="">Адрес
+                  <img src="../img/map.svg" alt="">Адрес
                 </p>
                 <a href="" class="link">
                   Кызыл, Рабочая, 208
@@ -192,7 +191,7 @@
               </div>
               <div class="is-navbar__contacts__item is-navbar-mobile__contacts__item">
                 <p class="title">
-                  <img src="./assets/img/email.svg" alt="">
+                  <img src="../img/email.svg" alt="">
                   Наша почта
                 </p>
                 <a href="mailto:info@gorodok17.ru" class="link">
@@ -201,7 +200,7 @@
               </div>
               <div class="is-navbar__contacts__item is-navbar-mobile__contacts__item">
                 <p class="title">
-                  <img src="./assets/img/phone.svg" alt="">
+                  <img src="../img/phone.svg" alt="">
                   Наши телефоны
                 </p>
                 <div class="dropdown">
@@ -239,21 +238,24 @@
                     Главная
                   </a>
                 </li>
-                <li class="breadcrumb-item">
-                  <a href="#">
-                    Каталог
-                  </a>
-                </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Рекламные конструкции
+                  Каталог
                 </li>
               </ol>
             </nav>
           </div>
         </div>
       </section>
-      <section id="is-catlist" class="section is-catlist container" style="padding-bottom: 0;">
-        <div class="row is-catlist__catbtns" style="margin-bottom: 0;">
+
+      <section id="is-catlist" class="section is-catlist container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="is-catlist__title">
+              Каталог
+            </h2>
+          </div>
+        </div>
+        <div class="row is-catlist__catbtns">
           <div class="col-sm-6 col-md-4 col-lg-2 mt-3">
             <div class="is-catlist__catbtns-card">
               <div class="is-catlist__catbtns-card__img">
@@ -367,129 +369,152 @@
             </div>
           </div>
         </div>
-      </section>
-      <section id="-is-category-title" class="section is-category-title">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9">
-              <h2 class="is-category-title__title" style="text-align: left;margin: 0;">
-                Рекламные конструкции для наружного и интерьерного оформления
-              </h2>
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center">
-              <div class="dropdown is-category-title__dropdown">
-                <a
-                    class="is-category-title__dropdown-btn dropdown-toggle"
-                    href="#"
-                    role="button"
-                    id="dropdownMenuLink"
-                    data-mdb-toggle="dropdown"
-                    aria-expanded="false"
-                >
-                  Все услуги
-                </a>
-
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Вывески</a></li>
-                  <li><a class="dropdown-item" href="#">Световые короба</a></li>
-                  <li><a class="dropdown-item" href="#">Объемные буквы</a></li>
-                  <li><a class="dropdown-item" href="#">Стеллы и пилоны</a></li>
-                  <li><a class="dropdown-item" href="#">Стенды и таблички</a></li>
-                </ul>
+        <div class="row is-catlist__cards">
+          <div class="col-md-6 mt-3">
+            <div class="is-catlist__cards-card">
+              <div class="is-catlist__cards-card__wrapper">
+                <div class="is-catlist__cards-card__wrapper-header">
+                  <h5 class="is-catlist__cards-card__wrapper-header__title">
+                    Рекламные конструкции
+                  </h5>
+                </div>
+                <div class="is-catlist__cards-card__wrapper-body" style="background: url('../img/category_preview_img1.png')">
+                  <div class="mask"></div>
+                  <div class="is-catlist__cards-card__wrapper-body__info">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at culpa dignissimos eligendi facilis impedit incidunt iure libero molestiae nisi obcaecati perferendis placeat quibusdam saepe, tempore tenetur vel vitae voluptas.
+                    </p>
+                  </div>
+                </div>
               </div>
+              <a href="!#" class="btn is-catlist__cards-card__btn">
+                <span>
+                  Подробнее
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3">
+            <div class="is-catlist__cards-card">
+              <div class="is-catlist__cards-card__wrapper">
+                <div class="is-catlist__cards-card__wrapper-header">
+                  <h5 class="is-catlist__cards-card__wrapper-header__title">
+                    Широкоформатная печать
+                  </h5>
+                </div>
+                <div class="is-catlist__cards-card__wrapper-body" style="background: url('../img/category_preview_img2.png')">
+                  <div class="mask"></div>
+                  <div class="is-catlist__cards-card__wrapper-body__info">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at culpa dignissimos eligendi facilis impedit incidunt iure libero molestiae nisi obcaecati perferendis placeat quibusdam saepe, tempore tenetur vel vitae voluptas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a href="!#" class="btn is-catlist__cards-card__btn">
+                <span>
+                  Подробнее
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3">
+            <div class="is-catlist__cards-card">
+              <div class="is-catlist__cards-card__wrapper">
+                <div class="is-catlist__cards-card__wrapper-header">
+                  <h5 class="is-catlist__cards-card__wrapper-header__title">
+                    Полиграфия
+                  </h5>
+                </div>
+                <div class="is-catlist__cards-card__wrapper-body" style="background: url('../img/category_preview_img3.png')">
+                  <div class="mask"></div>
+                  <div class="is-catlist__cards-card__wrapper-body__info">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at culpa dignissimos eligendi facilis impedit incidunt iure libero molestiae nisi obcaecati perferendis placeat quibusdam saepe, tempore tenetur vel vitae voluptas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a href="!#" class="btn is-catlist__cards-card__btn">
+                <span>
+                  Подробнее
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3">
+            <div class="is-catlist__cards-card">
+              <div class="is-catlist__cards-card__wrapper">
+                <div class="is-catlist__cards-card__wrapper-header">
+                  <h5 class="is-catlist__cards-card__wrapper-header__title">
+                    LED-технологии
+                  </h5>
+                </div>
+                <div class="is-catlist__cards-card__wrapper-body" style="background: url('../img/category_preview_img4.png')">
+                  <div class="mask"></div>
+                  <div class="is-catlist__cards-card__wrapper-body__info">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at culpa dignissimos eligendi facilis impedit incidunt iure libero molestiae nisi obcaecati perferendis placeat quibusdam saepe, tempore tenetur vel vitae voluptas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a href="!#" class="btn is-catlist__cards-card__btn">
+                <span>
+                  Подробнее
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3">
+            <div class="is-catlist__cards-card">
+              <div class="is-catlist__cards-card__wrapper">
+                <div class="is-catlist__cards-card__wrapper-header">
+                  <h5 class="is-catlist__cards-card__wrapper-header__title">
+                    Производство и сувениры
+                  </h5>
+                </div>
+                <div class="is-catlist__cards-card__wrapper-body" style="background: url('../img/category_preview_img5.png')">
+                  <div class="mask"></div>
+                  <div class="is-catlist__cards-card__wrapper-body__info">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at culpa dignissimos eligendi facilis impedit incidunt iure libero molestiae nisi obcaecati perferendis placeat quibusdam saepe, tempore tenetur vel vitae voluptas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a href="!#" class="btn is-catlist__cards-card__btn">
+                <span>
+                  Подробнее
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3">
+            <div class="is-catlist__cards-card">
+              <div class="is-catlist__cards-card__wrapper">
+                <div class="is-catlist__cards-card__wrapper-header">
+                  <h5 class="is-catlist__cards-card__wrapper-header__title">
+                    УФ-печать
+                  </h5>
+                </div>
+                <div class="is-catlist__cards-card__wrapper-body" style="background: url('../img/category_preview_img6.png')">
+                  <div class="mask"></div>
+                  <div class="is-catlist__cards-card__wrapper-body__info">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at culpa dignissimos eligendi facilis impedit incidunt iure libero molestiae nisi obcaecati perferendis placeat quibusdam saepe, tempore tenetur vel vitae voluptas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a href="!#" class="btn is-catlist__cards-card__btn">
+                <span>
+                  Подробнее
+                </span>
+              </a>
             </div>
           </div>
         </div>
-      </section>
-      <section id="is-category-products" class="section is-category-products">
-        <div class="container">
-          <div class="row is-category-products__card">
-            <div class="col-lg-12">
-              <div class="row is-category-products__card-wrapper">
-                <div class="col-lg-4 is-category-products__card-wrapper__img">
-                  <div class="is-category-products__card-wrapper__img-inner" style="background: url('./assets/img/caterory_products_card1.jpg');"></div>
-                </div>
-                <div class="col-lg-8 is-category-products__card-wrapper__info">
-                  <div class="is-category-products__card-wrapper__info-content">
-                    <h5 class="is-category-products__card-wrapper__info-content__title">
-                      Рекламные вывески
-                    </h5>
-                    <div class="is-category-products__card-wrapper__info-content__content">
-                      <p>
-                        <strong>Наружная (внешняя) реклама</strong> — графическая, текстовая либо иная информация рекламного характера, которая размещается на специальных временных и/или стационарных конструкциях, расположенных на открытой местности, а также на внешних поверхностях зданий, сооружений, элементах уличного оборудования, над проезжей частью улиц и дорог или на них самих.
-                      </p>
-                      <p>
-                        Наружняя реклама — средство рекламы, рассчитанное преимущественно на визуальное восприятие, устанавливаемое на стационарных и передвижных конструкциях вне места продаж товара. Наиболее распространенные форматы наружной рекламы: крышная установка, билборд (рекламный щит), суперсайт, суперборд, видеоэкран, призматрон, стела, ситилайт.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row is-category-products__card-portfolio">
-                <div class="col-lg-12">
-                  <div class="row">
-                    <h4 class="is-category-products__card-portfolio__title">
-                      Портфолио работ
-                    </h4>
-                  </div>
-                  <div class="row is-category-products__card-portfolio__cards">
-                    <div class="col-lg-4 is-category-products__card-portfolio__cards-card">
-                      <div class="is-category-products__card-portfolio__cards-card__inner">
-                        <div class="is-category-products__card-portfolio__cards-card__inner-img" style="background: url('./assets/img/category_products_card1_portfolio1.png');"></div>
-                        <h5 class="is-category-products__card-portfolio__cards-card__inner-title">
-                          Наружная вывеска
-                        </h5>
-                        <div class="is-category-products__card-portfolio__cards-card__inner-info">
-                          <p>
-                            Изготовили и смонтировали объёмные буквы и объёмный световой логотип
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 is-category-products__card-portfolio__cards-card">
-                      <div class="is-category-products__card-portfolio__cards-card__inner">
-                        <div class="is-category-products__card-portfolio__cards-card__inner-img" style="background: url('./assets/img/category_products_card1_portfolio2.png');"></div>
-                        <h5 class="is-category-products__card-portfolio__cards-card__inner-title">
-                          Обёемные буквы
-                        </h5>
-                        <div class="is-category-products__card-portfolio__cards-card__inner-info">
-                          <p>
-                            Изготовили рекламную вывеску из объёмных световых букв и алюминиевого короба
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 is-category-products__card-portfolio__cards-card">
-                      <div class="is-category-products__card-portfolio__cards-card__inner">
-                        <div class="is-category-products__card-portfolio__cards-card__inner-img" style="background: url('./assets/img/category_products_card1_portfolio3.png');"></div>
-                        <h5 class="is-category-products__card-portfolio__cards-card__inner-title">
-                          Рекламная вывеска
-                        </h5>
-                        <div class="is-category-products__card-portfolio__cards-card__inner-info">
-                          <p>
-                            Изготовили объёмную контражурную вывеску, покрытую хромовой металлизацией
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mt-5">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                      <a href="!#" class="is-category-products__card-bbtn">
-                        В каталог
-                      </a>
-                      <a href="!#" class="is-category-products__card-btn">
-                        Заказать услугу
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="is-category-products__line-bold"></div>
-        <div class="is-category-products__line-thin"></div>
       </section>
 
     </main>
@@ -498,7 +523,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 is-footer__logo">
-            <img src="./assets/img/footer_logo.png" alt="ГородОк" class="is-footer__logo-img">
+            <img src="../img/footer_logo.png" alt="ГородОк" class="is-footer__logo-img">
           </div>
           <div class="col-lg-2 is-footer__menu">
             <ul class="list-unstyled mb-0 is-footer__menu-list">
@@ -578,8 +603,7 @@
               </h3>
               <div class="is-footer__contacts-wrapper__content-item">
                 <p class="title">
-                  <img src="./assets/img/map.svg" alt="">
-                  Адрес
+                  <img src="../img/map.svg" alt="">Адрес
                 </p>
                 <a href="" class="link">
                   Кызыл, Рабочая, 208
@@ -587,7 +611,7 @@
               </div>
               <div class="is-footer__contacts-wrapper__content-item">
                 <p class="title">
-                  <img src="./assets/img/email.svg" alt="">
+                  <img src="../img/email.svg" alt="">
                   Наша почта
                 </p>
                 <a href="mailto:info@gorodok17.ru" class="link">
@@ -596,7 +620,7 @@
               </div>
               <div class="is-footer__contacts-wrapper__content-item">
                 <p class="title">
-                  <img src="./assets/img/phone.svg" alt="">
+                  <img src="../img/phone.svg" alt="">
                   Наши телефоны
                 </p>
                 <a href="!#" class="link">
@@ -608,6 +632,7 @@
                 <a href="!#" class="link">
                   +7 (92326) 66 667
                 </a>
+
               </div>
             </div>
           </div>
@@ -620,21 +645,20 @@
           </p>
           <a href="https://alianscompany.ru" target="_blank">
             Сайт разработан
-            <img src="./assets/img/ia-alians.png" alt="ИА Альянс+">
+            <img src="../img/ia-alians.png" alt="ИА Альянс+">
           </a>
         </div>
       </div>
     </footer>
 
-  <!-- Scripts section -->
-    <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/js/jquery.fancybox.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/mdb.min.js"></script>
-    <script src="./assets/js/uikit.min.js"></script>
-    <script src="./assets/js/uikit-icons.min.js"></script>
-    <script src="./assets/js/app.js"></script>
-    <script src="./assets/js/navscroll.js"></script>
-
+    <!-- Scripts section -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/mdb.min.js"></script>
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/uikit-icons.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/navscroll.js"></script>
   </body>
 </html>
