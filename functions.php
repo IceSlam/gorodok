@@ -140,10 +140,27 @@ add_action( 'widgets_init', 'gorodok_widgets_init' );
  * Enqueue scripts and styles.
  */
 function gorodok_scripts() {
-	wp_enqueue_style( 'gorodok-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'gorodok-style', 'rtl', 'replace' );
+    wp_enqueue_style( 'gorodok-style', get_stylesheet_uri(), array(), _S_VERSION );
+    wp_enqueue_style( 'Roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', array(), _S_VERSION );
+    wp_enqueue_style( 'FontAwesome-icons', get_template_directory_uri() . '/assets/css/all.min.css', array(), 5.15 );
+    wp_enqueue_style( 'Bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), 5.0 );
+    wp_enqueue_style( 'MDBootstrap-css', get_template_directory_uri() . '/assets/css/mdb.min.css', array(), 5.0 );
+    wp_enqueue_style( 'UIKit-css', get_template_directory_uri() . '/assets/css/uikit.min.css', array(), 3.16 );
+    wp_enqueue_style( 'FancyBox-css', get_template_directory_uri() . '/assets/css/jquery.fancybox.min.css', array(), 3.5 );
+    wp_enqueue_style( 'Main-css', get_template_directory_uri() . '/assets/css/main.min.css', array(), _S_VERSION );
+    wp_enqueue_style( 'Media-css', get_template_directory_uri() . '/assets/css/media.min.css', array(), _S_VERSION );
+    wp_style_add_data( 'remember-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'gorodok-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'gorodok-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'JQuery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), 3.5, true );
+    wp_enqueue_script( 'FancyBox', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array(), 3.5, true );
+    wp_enqueue_script( 'Bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), 5.0, true );
+    wp_enqueue_script( 'MDBootstrap', get_template_directory_uri() . '/assets/js/mdb.min.js', array(), 5.0, true );
+    wp_enqueue_script( 'UIKit', get_template_directory_uri() . '/assets/js/uikit.min.js', array(), 3.16, true );
+    wp_enqueue_script( 'UIKit-icons', get_template_directory_uri() . '/assets/js/juikit-icons.min.js', array(), 3.16, true );
+    wp_enqueue_script( 'GorodOK-app', get_template_directory_uri() . '/assets/js/app.min.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'GorodOK-navScroll', get_template_directory_uri() . '/assets/js/navscroll.js', array(), 3.5, true );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
