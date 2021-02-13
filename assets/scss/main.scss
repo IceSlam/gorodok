@@ -1905,11 +1905,10 @@
       background: rgb(115, 72, 72) none repeat scroll 0% 0%;
       &__wrapper {
         padding: 5.6875rem 0rem 5rem;
-        background: url("../img/index_about_bg.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        -webkit-background-size: cover;
-        background-size: cover;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        -webkit-background-size: cover !important;
+        background-size: cover !important;
       }
       &__title {
         text-align: center;

@@ -1651,10 +1651,9 @@
 }
 .page:not(.home) .is-main .is-advantages__wrapper {
 		padding: 5.6875rem 0rem 5rem;
-		background: url("../img/index_about_bg.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
+		background-repeat: no-repeat !important;
+		background-position: center !important;
+		background-size: cover !important;
 }
 .page:not(.home) .is-main .is-advantages__title {
 		text-align: center;

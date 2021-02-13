@@ -67,6 +67,34 @@ get_header();
           </div>
         </section>
       </div>
+      <section id="is-advantages" class="section is-advantages">
+        <div class="is-advantages__wrapper" style="background: url('<? echo get_template_directory_uri() . '/assets/img/index_about_bg.png'; ?>');">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="is-advantages__title">
+                  Наши преимущества
+                </div>
+              </div>
+            </div>
+            <div class="row is-advantages__content">
+                <?php while ( have_rows('about_advantages') ) : the_row(); ?>
+                  <div class="col-lg-6">
+                    <div class="is-advantages__content-card">
+                      <div class="is-advantages__content-card__img" style="background: url('<? the_sub_field('image'); ?>');"></div>
+                      <h5 class="is-advantages__content-card__title">
+                        <? the_sub_field('title'); ?>
+                      </h5>
+                      <p class="is-advantages__content-card__caption">
+                          <? the_sub_field('subtitle'); ?>
+                      </p>
+                    </div>
+                  </div>
+                <?php endwhile; ?>
+            </div>
+          </div>
+        </div>
+      </section>
 <?php
 get_footer(); ?>
 
