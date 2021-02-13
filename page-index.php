@@ -360,6 +360,124 @@ get_header();
         <div class="is-about__line-bold"></div>
         <div class="is-about__line-thin"></div>
       </section>
+      <section class="section is-trust">
+        <div class="container-fluid is-trust__wrapper">
+          <h2 class="is-trust__wrapper-title">
+            Нам доверяют
+          </h2>
+          <div class="uk-position-relative uk-visible-toggle uk-light is-trust__wrapper-slider" tabindex="-1" uk-slider="center: false">
+
+            <div class="container is-trust__wrapper-slider__navs" style="position: relative;">
+
+              <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+              <div class="is-trust__wrapper-slider__navs-divider"></div>
+              <a href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+            </div>
+
+            <ul class="uk-slider-items uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-2@m uk-child-width-1-5@xl uk-grid is-trust__wrapper-slider__slides">
+                <?php while ( have_rows('index_trust_slides') ) : the_row(); ?>
+                  <li class="is-trust__wrapper-slider__slides-slide">
+                    <div class="uk-panel">
+                      <img src="<? the_sub_field('logo'); ?>" alt="<? the_sub_field('company'); ?>">
+                    </div>
+                  </li>
+                <?php endwhile; ?>
+            </ul>
+
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+          </div>
+
+        </div>
+        <div class="container">
+          <div class="row section__order">
+            <div class="col-md-12">
+              <div class="section__order__block" style="background: url(<? echo get_template_directory_uri() . '/assets/img/index_working_order_bg.png'; ?>), #122042;);">
+                <h4 class="section__order__block__title">
+                  Запросить расчеты
+                </h4>
+                <button
+                    type="button"
+                    class="btn section__order__block__btn"
+                    data-mdb-toggle="modal"
+                    data-mdb-target="#section-order-modal"
+                >
+                  Оставить заявку
+                </button>
+                <div
+                    class="modal fade section__order__modal"
+                    id="section-order-modal"
+                    tabindex="-1"
+                    aria-labelledby="section-order-modal-label"
+                    aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="section-order-modal-label">
+                          Оставить заявку
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-mdb-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+
+                          <div class="form-outline mb-4">
+                            <input type="text" id="section-order-form-name" class="form-control" />
+                            <label class="form-label" for="section-order-form-name">
+                              Ваше имя
+                            </label>
+                          </div>
+
+                          <div class="form-outline mb-4">
+                            <input type="email" id="section-order-form-email" class="form-control" />
+                            <label class="form-label" for="section-order-form-email">
+                              Ваш E-mail
+                            </label>
+                          </div>
+
+                          <div class="form-outline mb-4">
+                            <textarea class="form-control" id="section-order-form-message" rows="4"></textarea>
+                            <label class="form-label" for="section-order-form-message">
+                              Ваше сообщение
+                            </label>
+                          </div>
+
+                          <div class="form-check d-flex mb-4 px-0" >
+                            <input
+                                class="form-check-input me-0 mx-0"
+                                type="checkbox"
+                                value=""
+                                id="form4Example4"
+                                style="margin-left: 1rem;width: 16px;height: 16px;"
+                            />
+                            <label class="form-check-label mx-3" for="form4Example4">
+                              С <a href="!#" style="color: #c23a3a;">Политикой конфиденциальности и обработки персональных данных</a> ознакомлен
+                            </label>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn is-btn-close" data-mdb-dismiss="modal">
+                              Отмена
+                            </button>
+                            <button type="submit" class="btn">
+                              Отправить
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 <?php
 get_footer(); ?>
 
