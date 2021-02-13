@@ -99,36 +99,6 @@ get_header();
         <div style="overflow: hidden;padding-top: 4rem;">
           <div class="container">
             <div class="row is-records__cards">
-              <div class="col-lg-6 is-records__cards-square__wrapper">
-                <p class="is-records__cards-square__wrapper-caption">
-                  Баннера
-                </p>
-                <div id="capt-one" class="is-records__cards-square">
-                  <p class="is-records__cards-square__caption">
-                        <span class="capt" data-n="150000">
-                          0
-                      </span>
-                    <span class="qtype">
-                        кв. м
-                      </span>
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-6 is-records__cards-square__wrapper right">
-                <p class="is-records__cards-square__wrapper-caption">
-                  на одном объекте
-                </p>
-                <div class="is-records__cards-square">
-                  <p class="is-records__cards-square__caption">
-                        <span class="capt" data-n="2">
-                          0
-                        </span>,5
-                    <span class="qtype">
-                            км
-                          </span>
-                  </p>
-                </div>
-              </div>
               <div class="col-lg-12 is-records__cards-circle__wrapper">
                 <div class="is-records__cards-circle">
                   <div class="is-records__cards-circle__inner">
@@ -138,51 +108,112 @@ get_header();
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 is-records__cards-square__wrapper">
-                <p class="is-records__cards-square__wrapper-caption">
-                  Вывески
-                </p>
-                <div class="is-records__cards-square">
-                  <p class="is-records__cards-square__caption">
-                        <span class="capt" data-n="15000">
+                <?php while ( have_rows('about_records') ) : the_row(); ?>
+                  <div class="col-lg-6 is-records__cards-square__wrapper">
+                    <p class="is-records__cards-square__wrapper-caption">
+                      <? the_sub_field('title'); ?>
+                    </p>
+                    <div id="capt-one" class="is-records__cards-square">
+                      <p class="is-records__cards-square__caption">
+                        <span class="capt" data-n="<? the_sub_field('count'); ?>">
                           0
-                        </span>
-                    <span class="qtype">
-                          пог.м
-                        </span>
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-6 is-records__cards-square__wrapper right">
-                <p class="is-records__cards-square__wrapper-caption">
-                  Для украшений города
-                </p>
-                <div class="is-records__cards-square">
-                  <p class="is-records__cards-square__caption">
-                        <span class="capt" data-n="400">
-                          0
-                        </span>
-                    <span class="qtype">
-                          км
-                        </span>
-                  </p>
-                </div>
-              </div>
+                      </span>
+                        <span class="qtype">
+                        <? the_sub_field('measure'); ?>
+                      </span>
+                      </p>
+                    </div>
+                  </div>
+                <?php endwhile; ?>
             </div>
             <div class="row section__order">
               <div class="col-md-12">
-                <div class="section__order__block">
+                <div class="section__order__block" style="background: url(<? echo get_template_directory_uri() . '/assets/img/index_working_order_bg.png'; ?>), #122042;);">
                   <h4 class="section__order__block__title">
                     Запросить расчеты
                   </h4>
-                  <a href="" class="btn section__order__block__btn">
+                  <button
+                      type="button"
+                      class="btn section__order__block__btn"
+                      data-mdb-toggle="modal"
+                      data-mdb-target="#section-order-modal"
+                  >
                     Оставить заявку
-                  </a>
+                  </button>
+                  <div
+                      class="modal fade section__order__modal"
+                      id="section-order-modal"
+                      tabindex="-1"
+                      aria-labelledby="section-order-modal-label"
+                      aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="section-order-modal-label">
+                            Оставить заявку
+                          </h5>
+                          <button
+                              type="button"
+                              class="btn-close"
+                              data-mdb-dismiss="modal"
+                              aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+
+                            <div class="form-outline mb-4">
+                              <input type="text" id="section-order-form-name" class="form-control" />
+                              <label class="form-label" for="section-order-form-name">
+                                Ваше имя
+                              </label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                              <input type="email" id="section-order-form-email" class="form-control" />
+                              <label class="form-label" for="section-order-form-email">
+                                Ваш E-mail
+                              </label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                              <textarea class="form-control" id="section-order-form-message" rows="4"></textarea>
+                              <label class="form-label" for="section-order-form-message">
+                                Ваше сообщение
+                              </label>
+                            </div>
+
+                            <div class="form-check d-flex mb-4 px-0" >
+                              <input
+                                  class="form-check-input me-0 mx-0"
+                                  type="checkbox"
+                                  value=""
+                                  id="form4Example4"
+                                  style="margin-left: 1rem;width: 16px;height: 16px;"
+                              />
+                              <label class="form-check-label mx-3" for="form4Example4">
+                                С <a href="!#" style="color: #c23a3a;">Политикой конфиденциальности и обработки персональных данных</a> ознакомлен
+                              </label>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn is-btn-close" data-mdb-dismiss="modal">
+                                Отмена
+                              </button>
+                              <button type="submit" class="btn">
+                                Отправить
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <img src="../img/index_working_right_round_bg.svg" alt="ГородОк" class="is-records__round-right">
+          <img src="<? echo get_template_directory_uri() . '/assets/img/index_working_right_round_bg.svg'; ?>" alt="ГородОк" class="is-records__round-right">
         </div>
         <div class="is-records__line-bold"></div>
         <div class="is-records__line-thin"></div>
