@@ -301,8 +301,64 @@ get_header();
               </div>
             </div>
           </div>
-          <img src="../img/index_working_right_round_bg.svg" alt="Мы работаем для Вас! " class="is-working__round-right">
+          <img src="<? echo get_template_directory_uri() . '/assets/img/index_working_right_round_bg.svg'; ?>" alt="Мы работаем для Вас! " class="is-working__round-right">
         </div>
+      </section>
+      <section id="is-about" class="section is-about">
+        <div class="is-about__wrapper" style="background: url(<? echo get_template_directory_uri() . '/assets/img/index_about_bg.png'; ?>">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="is-about__wrapper__info">
+                  <h2 class="is-about__wrapper__info-title">
+                    <? the_field('index_about_title'); ?>
+                  </h2>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-8">
+                <div class="is-about__wrapper__info-content">
+                    <? the_field('index_about_info'); ?>
+                  <a href="<? the_field('index_about_link'); ?>" class="btn is-about__wrapper__info-content__btn">
+                    Подробнее
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                      <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row is-about__wrapper-cards">
+                <?php while ( have_rows('index_about_staff') ) : the_row(); ?>
+                  <div class="col-md-6 col-lg-3 mt-3">
+                    <div class="card is-about__wrapper-cards__card">
+                      <div class="is-about__wrapper-cards__card-img" style="background: url(<? the_sub_field('photo'); ?>);">
+                        <img
+                            src="<? echo get_template_directory_uri() . '/assets/img/index_about_card_img.png'; ?>"
+                            class="card-img-top"
+                            alt="..."
+                        />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <? the_sub_field('name'); ?>
+                        </h5>
+                        <p class="card-text">
+                            <? the_sub_field('description'); ?>
+                        </p>
+                        <a href="tel:<? the_sub_field('phone'); ?>" class="btn is-about__wrapper-cards__card-btn">
+                          <img src="<? echo get_template_directory_uri() . '/assets/img/index_about_card_phone.svg'; ?>" alt="Телефон сотрудника">
+                          <? the_sub_field('phone'); ?>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                <?php endwhile; ?>
+            </div>
+          </div>
+        </div>
+        <img src="<? echo get_template_directory_uri() . '/assets/img/index_about_logo_left.png'; ?>" alt="Город'ОК" class="is-about__logo-left">
+        <div class="is-about__line-bold"></div>
+        <div class="is-about__line-thin"></div>
       </section>
 <?php
 get_footer(); ?>

@@ -732,11 +732,10 @@
     background: $gorodokDarkRed;
     border-radius: 10px;
     &__wrapper {
-      background: url('../img/index_about_bg.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      -webkit-background-size: cover;
-      background-size: cover;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      -webkit-background-size: cover !important;
+      background-size: cover !important;
       padding: 5.35rem 0;
       border-radius: 10px;
       z-index: 3;
@@ -790,11 +789,10 @@
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
             border-radius: 10px;
-            background: url('../img/index_about_card_img.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            -webkit-background-size: cover;
-            background-size: cover;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            -webkit-background-size: cover !important;
+            background-size: cover !important;
             img {
               opacity: 0;
             }
