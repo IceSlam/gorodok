@@ -478,6 +478,97 @@ get_header();
           </div>
         </div>
       </section>
+      <section id="news" class="section is-news">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="is-news__title">
+                Новости и статьи
+              </h2>
+            </div>
+          </div>
+          <div class="row is-news__cards-wrapper">
+            <div class="col-md-6 col-lg-4">
+              <div class="is-news__cards-wrapper__card card">
+                <div class="is-news__cards-wrapper__card-header" style="background: url('<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>');">
+                  <img
+                      src="<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>"
+                      class="card-img-top is-news__cards-wrapper__card-header__img img-fluid"
+                      alt="..."
+                  />
+                  <div class="is-news__cards-wrapper__card-header__badge">
+                    21.08.20
+                  </div>
+                </div>
+                <div class="card-body is-news__cards-wrapper__card-body">
+                  <h5 class="card-title is-news__cards-wrapper__card-body__title">
+                    Название новости длинное
+                  </h5>
+                  <a href="#!" class="btn is-news__cards-wrapper__card-body__btn">
+                    Подробнее
+                    <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" alt="Подробнее">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="is-news__cards-wrapper__card card">
+                <div class="is-news__cards-wrapper__card-header" style="background: url('<? echo get_template_directory_uri() . '/assets/img/index_news_item2.jpg'; ?>');">
+                  <img
+                      src="<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>"
+                      class="card-img-top is-news__cards-wrapper__card-header__img img-fluid"
+                      alt="..."
+                  />
+                  <div class="is-news__cards-wrapper__card-header__badge">
+                    21.08.20
+                  </div>
+                </div>
+                <div class="card-body is-news__cards-wrapper__card-body">
+                  <h5 class="card-title is-news__cards-wrapper__card-body__title">
+                    Название новости длинное
+                  </h5>
+                  <a href="#!" class="btn is-news__cards-wrapper__card-body__btn">
+                    Подробнее
+                    <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" alt="Подробнее">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="is-news__cards-wrapper__card card">
+                <div class="is-news__cards-wrapper__card-header" style="background: url('<? echo get_template_directory_uri() . '/assets/img/index_news_item3.jpg'; ?>');">
+                  <img
+                      src="<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>"
+                      class="card-img-top is-news__cards-wrapper__card-header__img img-fluid"
+                      alt="..."
+                  />
+                  <div class="is-news__cards-wrapper__card-header__badge">
+                    21.08.20
+                  </div>
+                </div>
+                <div class="card-body is-news__cards-wrapper__card-body">
+                  <h5 class="card-title is-news__cards-wrapper__card-body__title">
+                    Название новости длинное
+                  </h5>
+                  <a href="#!" class="btn is-news__cards-wrapper__card-body__btn">
+                    Подробнее
+                    <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" alt="Подробнее">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12 d-flex justify-content-center">
+              <a href="https://gorodok17.ru/news" class="btn is-news__btn">
+                Все новости
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="is-news__line-bold"></div>
+        <div class="is-news__line-thin"></div>
+      </section>
 <?php
 get_footer(); ?>
 
