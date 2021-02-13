@@ -166,8 +166,8 @@
 		.is-main .is-slider {
 				min-height: 300px;
 		}
-		.is-main .is-slider .uk-slideshow .uk-slideshow-items li img {
-				min-height: 800px;
+		.is-main .is-slider .uk-slideshow .uk-slideshow-items li {
+				min-height: auto;
 		}
 		.is-main .is-slider .uk-slideshow .uk-slideshow-items li .uk-position-center h2 {
 				font-size: 1.75rem;
@@ -635,8 +635,8 @@
 		.is-main .is-slider {
 				min-height: 300px;
 		}
-		.is-main .is-slider .uk-slideshow .uk-slideshow-items li img {
-				min-height: 800px;
+		.is-main .is-slider .uk-slideshow .uk-slideshow-items li {
+				min-height: auto;
 		}
 		.is-main .is-slider .uk-slideshow .uk-slideshow-items li .uk-position-center h2 {
 				font-size: 1.75rem;

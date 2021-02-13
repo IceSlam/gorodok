@@ -425,6 +425,11 @@
     overflow: hidden;
     .uk-slideshow-items {
       li {
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        min-height: 750px;
         h2 {
           font-size: 3.4375rem;
           line-height: 3.125rem;
@@ -1589,7 +1594,7 @@
   }
 }
 
-.page {
+.page:not(.home) {
   .is-header {
     .is-navbar {
       background: url("../img/navbar_other_bg.png");

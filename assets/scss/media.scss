@@ -198,9 +198,7 @@
       .uk-slideshow {
         .uk-slideshow-items {
           li {
-            img {
-              min-height: 800px;
-            }
+            min-height: auto;
             .uk-position-center {
               h2 {
                 font-size: 1.75rem;
@@ -754,8 +752,8 @@
       .uk-slideshow {
         .uk-slideshow-items {
           li {
+            min-height: auto;
             img {
-              min-height: 800px;
             }
             .uk-position-center {
               h2 {
