@@ -69,7 +69,7 @@
                 <p class="title">
                   <img src="<? echo get_template_directory_uri() . '/assets/img/map.svg'; ?>" alt="Адрес">Адрес
                 </p>
-                <a href="" class="link">
+                <a href="<? the_field('system_address_link', 'option'); ?>" class="link" target="_blank">
                     <? the_field('system_address', 'option'); ?>
                 </a>
               </div>
@@ -164,7 +164,7 @@
                 <p class="title">
                   <img src="<? echo get_template_directory_uri() . '/assets/img/map.svg'; ?>" alt="Адрес">Адрес
                 </p>
-                <a href="" class="link">
+                <a href="<? the_field('system_address_link', 'option'); ?>" class="link" target="_blank">
                     <? the_field('system_address', 'option'); ?>
                 </a>
               </div>
