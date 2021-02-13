@@ -264,10 +264,8 @@
 		justify-content: space-between;
 		padding: 2.5rem 3rem;
 		border-radius: 10px 10px 0 0;
-		background: #000;
-		background: url("../img/index_working_order_bg.png"), #122042;
-		background-repeat: no-repeat;
-		background-position: left center;
+		background-repeat: no-repeat !important;
+		background-position: left center !important;
 		overflow: hidden;
 }
 .is-main .section__order__block::before {
@@ -584,6 +582,7 @@
 		font-size: 1.125rem;
 		line-height: 1.325rem;
 		margin-top: 0.625rem;
+		display: block;
 }
 .is-main .is-working__order {
 		margin-top: 5.5rem;
