@@ -95,6 +95,98 @@ get_header();
           </div>
         </div>
       </section>
+      <section id="is-records" class="section is-records">
+        <div style="overflow: hidden;padding-top: 4rem;">
+          <div class="container">
+            <div class="row is-records__cards">
+              <div class="col-lg-6 is-records__cards-square__wrapper">
+                <p class="is-records__cards-square__wrapper-caption">
+                  Баннера
+                </p>
+                <div id="capt-one" class="is-records__cards-square">
+                  <p class="is-records__cards-square__caption">
+                        <span class="capt" data-n="150000">
+                          0
+                      </span>
+                    <span class="qtype">
+                        кв. м
+                      </span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 is-records__cards-square__wrapper right">
+                <p class="is-records__cards-square__wrapper-caption">
+                  на одном объекте
+                </p>
+                <div class="is-records__cards-square">
+                  <p class="is-records__cards-square__caption">
+                        <span class="capt" data-n="2">
+                          0
+                        </span>,5
+                    <span class="qtype">
+                            км
+                          </span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-12 is-records__cards-circle__wrapper">
+                <div class="is-records__cards-circle">
+                  <div class="is-records__cards-circle__inner">
+                    <h2 class="is-records__cards-circle__title">
+                      Наши рекорды
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 is-records__cards-square__wrapper">
+                <p class="is-records__cards-square__wrapper-caption">
+                  Вывески
+                </p>
+                <div class="is-records__cards-square">
+                  <p class="is-records__cards-square__caption">
+                        <span class="capt" data-n="15000">
+                          0
+                        </span>
+                    <span class="qtype">
+                          пог.м
+                        </span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 is-records__cards-square__wrapper right">
+                <p class="is-records__cards-square__wrapper-caption">
+                  Для украшений города
+                </p>
+                <div class="is-records__cards-square">
+                  <p class="is-records__cards-square__caption">
+                        <span class="capt" data-n="400">
+                          0
+                        </span>
+                    <span class="qtype">
+                          км
+                        </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row section__order">
+              <div class="col-md-12">
+                <div class="section__order__block">
+                  <h4 class="section__order__block__title">
+                    Запросить расчеты
+                  </h4>
+                  <a href="" class="btn section__order__block__btn">
+                    Оставить заявку
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="../img/index_working_right_round_bg.svg" alt="ГородОк" class="is-records__round-right">
+        </div>
+        <div class="is-records__line-bold"></div>
+        <div class="is-records__line-thin"></div>
+      </section>
 <?php
 get_footer(); ?>
 
