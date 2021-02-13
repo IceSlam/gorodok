@@ -104,6 +104,9 @@
         justify-content: space-around;
         li {
           margin: 0rem 2.5rem;
+          &.active {
+            border-top: 1px solid #fff;
+          }
           .nav-link {
             color: #ffffff;
             padding-top: 1rem;
@@ -116,9 +119,6 @@
               border-top: 1px solid #fff;
               transition: all .5s;
             }
-          }
-          .nav-link.active {
-            border-top: 1px solid #fff;
           }
         }
       }

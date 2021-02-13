@@ -86,18 +86,27 @@
 		.is-header .is-navbar-mobile__contacts {
 				display: block !important;
 				width: 100%;
+				max-width: 75%;
+				margin-left: 0 !important;
 		}
 		.is-header .is-navbar-mobile__contacts-wrapper {
+				display: flex;
+				justify-content: center;
 				width: 100%;
 		}
 		.is-header .is-navbar-mobile__contacts__item {
 				display: block;
 				margin: 0 auto;
-				text-align: center;
 				margin-bottom: 1rem;
+		}
+		.is-header .is-navbar-mobile__contacts__item .title img {
+				margin-left: 0 !important;
 		}
 		.is-header .is-navbar-mobile .desktop-menu-wrap .navbar-nav li {
 				text-align: center;
+		}
+		.is-header .is-navbar-mobile .desktop-menu-wrap .navbar-nav li.active .nav-link {
+				color: #ffffff;
 		}
 
 		.is-footer__menu {

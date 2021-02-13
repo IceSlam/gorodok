@@ -99,6 +99,9 @@
 .is-header .is-navbar .desktop-menu-wrap .navbar-nav li {
 		margin: 0rem 2.5rem;
 }
+.is-header .is-navbar .desktop-menu-wrap .navbar-nav li.active {
+		border-top: 1px solid #fff;
+}
 .is-header .is-navbar .desktop-menu-wrap .navbar-nav li .nav-link {
 		color: #ffffff;
 		padding-top: 1rem;
@@ -111,9 +114,6 @@
 .is-header .is-navbar .desktop-menu-wrap .navbar-nav li .nav-link:hover {
 		border-top: 1px solid #fff;
 		transition: all 0.5s;
-}
-.is-header .is-navbar .desktop-menu-wrap .navbar-nav li .nav-link.active {
-		border-top: 1px solid #fff;
 }
 
 .is-footer {

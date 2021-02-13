@@ -48,11 +48,14 @@ if ( ! function_exists( 'gorodok_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(
-			array(
-				'menu-1' => esc_html__( 'Primary', 'gorodok' ),
-			)
-		);
+        register_nav_menus(
+            array(
+                'headerDesktop' => esc_html__( 'Шапка Десктоп', 'gorodok' ),
+                'headerMobile' => esc_html__( 'Шапка Мобильные' , 'gorodok' ),
+                'footerLeft' => esc_html__('Подвал Левое', 'gorodok'),
+                'footerRight' => esc_html__('Подвал Правое', 'gorodok')
+            )
+        );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -242,3 +245,11 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
+
+if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
+// File does not exist... return an error.
+    return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+} else {
+    // File exists... require it.
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
