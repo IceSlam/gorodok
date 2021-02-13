@@ -1607,16 +1607,22 @@
       padding-top: 13rem;
       &__breadcrumbs {
         &-list {
-          li {
+          span {
             font-weight: 500;
             font-size: .875rem;
             color: $gorodokDarkBlue;
             a {
               color: $gorodokDarkBlue;
             }
+            .breadcrumb_last {
+              &:before {
+                content: var(--bs-breadcrumb-divider,"-");
+                margin-left: .5rem;
+                margin-right: .5rem;
+              }
+            }
           }
-          li + li::before {
-            content: var(--bs-breadcrumb-divider,"-");
+          span + span::before {
           }
         }
       }
@@ -1754,11 +1760,10 @@
     &-about {
       padding-top: 10rem;
       padding-bottom: 6.25rem;
-      background: url('../img/about_page_block_bg.png'), #fff;
-      background-repeat: no-repeat;
-      -webkit-background-size: auto;
-      background-size: 53%;
-      background-position: left bottom;
+      background-repeat: no-repeat !important;
+      -webkit-background-size: 53% !important;
+      background-size: 53% !important;
+      background-position: left bottom !important;
       .is-theader {
         padding-top: 3rem;
       }

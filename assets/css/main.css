@@ -1379,16 +1379,18 @@
 .page:not(.home) .is-main .is-theader {
 		padding-top: 13rem;
 }
-.page:not(.home) .is-main .is-theader__breadcrumbs-list li {
+.page:not(.home) .is-main .is-theader__breadcrumbs-list span {
 		font-weight: 500;
 		font-size: 0.875rem;
 		color: #122042;
 }
-.page:not(.home) .is-main .is-theader__breadcrumbs-list li a {
+.page:not(.home) .is-main .is-theader__breadcrumbs-list span a {
 		color: #122042;
 }
-.page:not(.home) .is-main .is-theader__breadcrumbs-list li + li::before {
+.page:not(.home) .is-main .is-theader__breadcrumbs-list span .breadcrumb_last:before {
 		content: var(--bs-breadcrumb-divider, "-");
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
 }
 .page:not(.home) .is-main .is-contacts {
 		padding: 1.5rem 0 10rem;
@@ -1511,10 +1513,9 @@
 .page:not(.home) .is-main-about {
 		padding-top: 10rem;
 		padding-bottom: 6.25rem;
-		background: url("../img/about_page_block_bg.png"), #fff;
-		background-repeat: no-repeat;
-		background-size: 53%;
-		background-position: left bottom;
+		background-repeat: no-repeat !important;
+		background-size: 53% !important;
+		background-position: left bottom !important;
 }
 .page:not(.home) .is-main-about .is-theader {
 		padding-top: 3rem;
