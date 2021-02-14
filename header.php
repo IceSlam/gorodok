@@ -27,7 +27,7 @@
     <header id="is-header" class="is-header header">
       <nav id="navbar" class="is-navbar navbar navbar-expand-lg navbar-dark">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img
                 src="<? the_field('system_logo_header', 'option'); ?>"
                 alt="Город'ОК"

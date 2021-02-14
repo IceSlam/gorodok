@@ -1853,6 +1853,14 @@
 		color: #ffffff;
 		text-align: center;
 }
+.page:not(.home) .is-main .is-work__cards-card:hover .is-work__cards-card__content-img {
+		transition: all 0.5s;
+		box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);
+}
+.page:not(.home) .is-main .is-work__cards-card:hover .is-work__cards-card__content-badge {
+		transition: all 0.5s;
+		box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);
+}
 .page:not(.home) .is-main .is-work__cards-card__content {
 		position: relative;
 		max-width: 300px;
@@ -1861,6 +1869,7 @@
 .page:not(.home) .is-main .is-work__cards-card__content-img {
 		max-width: 300px;
 		width: 100%;
+		transition: all 0.5s;
 }
 .page:not(.home) .is-main .is-work__cards-card__content-title {
 		display: flex;
@@ -1894,6 +1903,7 @@
 		background: #122042;
 		border-radius: 50%;
 		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+		transition: all 0.5s;
 }
 .page:not(.home) .is-main .is-work__cards-card:nth-child(1) {
 		padding-bottom: 1rem;
@@ -1949,9 +1959,9 @@
 }
 .page:not(.home) .is-main .is-work__banner-wrapper {
 		background: url("../img/about_page_work_banner_img.png");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: center !important;
 		position: relative;
 		padding: 10rem 5rem;
 		border-radius: 10px;
@@ -1967,10 +1977,9 @@
 		bottom: 0;
 		left: 0;
 		display: block;
-		background: url("../img/about_page_work_bg.png");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
+		background-size: cover !important;
+		background-repeat: no-repeat !important;
+		background-position: center !important;
 }
 .page:not(.home) .is-main .is-work__banner-btn {
 		box-shadow: none;

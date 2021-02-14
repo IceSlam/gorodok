@@ -218,6 +218,63 @@ get_header();
         <div class="is-records__line-bold"></div>
         <div class="is-records__line-thin"></div>
       </section>
+      <section id="is-work" class="section is-work">
+        <div class="container is-work__cards-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="is-work__title">
+                Как мы работаем
+              </h2>
+            </div>
+          </div>
+          <div class="row is-work__cards">
+              <?php
+              $stepCount = 0;
+              while ( have_rows('working_stage_list') ) : the_row();
+              $stepCount++
+                  ?>
+                <div class="col-md-6 col-lg-4 is-work__cards-card">
+                  <div class="is-work__cards-card__content">
+                    <img src="<? the_sub_field('img'); ?>" alt="Обращение в компанию" class="is-work__cards-card__content-img">
+                    <h5 class="is-work__cards-card__content-title">
+                        <span>
+                          <? echo $stepCount ?>
+                        </span>
+                      <? the_sub_field('title'); ?>
+                    </h5>
+                    <div class="is-work__cards-card__content-badge">
+                      <img src="<? the_sub_field('icon'); ?>" alt="<? the_sub_field('title'); ?>">
+                    </div>
+                  </div>
+                </div>
+              <?php endwhile; ?>
+            <div class="col-md-6 col-lg-4 is-work__cards-card">
+            </div>
+          </div>
+          <div class="row is-work__banner">
+            <div class="col-lg-12">
+              <style>
+                .is-work__banner-wrapper::before {
+                    background: url(<? echo get_template_directory_uri() . '/assets/img/about_page_work_bg.png';?>) !important;
+                }
+              </style>
+              <div class="is-work__banner-wrapper" style="background: url('<? the_field('about_working_stage_img'); ?>');">
+                <div class="d-block" style="z-index: 40;">
+                  </style>
+                  <h3 class="is-work__banner-title">
+                    Готовый заказ
+                  </h3>
+                  <a href="!#" class="is-work__banner-btn">
+                    Оставить заявку
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="is-work__line-bold"></div>
+        <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_work_logo.png'; ?>" alt="Город'ОК'" class="is-work__logo-bg">
+      </section>
 <?php
 get_footer(); ?>
 
