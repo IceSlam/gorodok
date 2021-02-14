@@ -246,6 +246,12 @@ if( function_exists('acf_add_options_page') ) {
 
 add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
 
+/*
+=================================================================================
+-------------- Bootstrap Навигация ----------------------------------------------
+=================================================================================
+*/
+
 if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
 // File does not exist... return an error.
     return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
@@ -253,3 +259,78 @@ if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.ph
     // File exists... require it.
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
+
+/*
+=================================================================================
+-------------- Тип поста Новости (News post type) -------------------------------
+=================================================================================
+*/
+
+function gorodok_post_type_news() {
+
+    $labels = [
+        "name" => __( "Новости", "gorodok" ),
+        "singular_name" => __( "Новость", "gorodok" ),
+        "menu_name" => __( "Новости", "gorodok" ),
+        "all_items" => __( "Все новости", "gorodok" ),
+        "add_new" => __( "Добавить новость", "gorodok" ),
+        "add_new_item" => __( "Добавить новость", "gorodok" ),
+        "edit_item" => __( "Редактировать новость", "gorodok" ),
+        "new_item" => __( "Новая новость", "gorodok" ),
+        "view_item" => __( "Просмотреть новость", "gorodok" ),
+        "view_items" => __( "Просмотреть новости", "gorodok" ),
+        "search_items" => __( "Поиск новостей", "gorodok" ),
+        "not_found" => __( "Новостей не найдено", "gorodok" ),
+        "not_found_in_trash" => __( "В корзине не найдено новостей", "gorodok" ),
+        "parent" => __( "Родительские новости:", "gorodok" ),
+        "featured_image" => __( "Изображение новости", "gorodok" ),
+        "set_featured_image" => __( "Установить изображение новости", "gorodok" ),
+        "remove_featured_image" => __( "Удалоить изображение новости", "gorodok" ),
+        "use_featured_image" => __( "Использовать изображение по умолчанию", "gorodok" ),
+        "archives" => __( "Новости", "gorodok" ),
+        "insert_into_item" => __( "Вставить в новость", "gorodok" ),
+        "uploaded_to_this_item" => __( "Загружено в новость", "gorodok" ),
+        "filter_items_list" => __( "Фильтр по новостям", "gorodok" ),
+        "items_list_navigation" => __( "Навигация по списку новостей", "gorodok" ),
+        "items_list" => __( "Список новостей", "gorodok" ),
+        "attributes" => __( "Атрибуты новостей", "gorodok" ),
+        "name_admin_bar" => __( "Новость", "gorodok" ),
+        "item_published" => __( "Новость опубликована", "gorodok" ),
+        "item_published_privately" => __( "Новость опубликована приватно", "gorodok" ),
+        "item_reverted_to_draft" => __( "Новость в черновике", "gorodok" ),
+        "item_scheduled" => __( "Новость по расписанию", "gorodok" ),
+        "item_updated" => __( "Новость обновлена", "gorodok" ),
+        "parent_item_colon" => __( "Родительские новости:", "gorodok" ),
+    ];
+
+    $args = [
+        "label" => __( "Новости", "gorodok" ),
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "news",
+        "rest_controller_class" => "WP_REST_Posts_Controller",
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "delete_with_user" => false,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => [ "slug" => "news", "with_front" => true ],
+        "query_var" => true,
+        "supports" => [ "title", "editor", "thumbnail", "excerpt", "trackbacks", "custom-fields", "comments", "revisions", "author", "page-attributes", "post-formats" ],
+        "taxonomies" => [ "news" ],
+        'menu_position'       => 2,
+        'menu_icon'           => 'dashicons-align-left'
+    ];
+
+    register_post_type( "news", $args );
+}
+
+add_action( 'init', 'gorodok_post_type_news' );
+
