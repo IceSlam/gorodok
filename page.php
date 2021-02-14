@@ -991,23 +991,155 @@ get_header();
         <div class="is-reviews__line-bold"></div>
         <div class="is-reviews__line-thin"></div>
       </section>
-   <?php } else { ?>
-      <main id="primary" class="site-main">
+   <?php } elseif ($thePageId == 7) { ?>
+      <section id="is-theader" class="section is-theader container">
+        <div class="row">
+          <div class="col-lg-12">
 
-          <?php
-          while ( have_posts() ) :
-              the_post();
+            <nav aria-label="breadcrumb" class="is-theader__breadcrumbs">
+                <?php
+                if ( function_exists('yoast_breadcrumb') ) {
+                    yoast_breadcrumb( '<ol id="breadcrumbs" class="breadcrumb is-theader__breadcrumbs-list">','</ol>' );
+                }
+                ?>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section id="is-contacts" class="section is-contacts container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="is-contacts__title">
+              Наши контакты
+            </h2>
+          </div>
+        </div>
+        <div class="row is-contacts__form" style="background: url('<? echo get_template_directory_uri() . '/assets/img/contacts_form_bg.jpg'; ?>');">
+          <div class="col-lg-12">
+            <h3 class="is-contacts__form-title">
+              Заполните заявку для расчета стоимости
+            </h3>
+          </div>
+          <form action="">
+            <div class="row justify-content-center">
+              <div class="offset-1"></div>
+              <div class="col-lg-4 px-3">
+                <div class="form-outline is-contacts__form-input">
+                  <input type="text" id="is-contacts-form-phone" class="form-control" />
+                  <label class="form-label" for="is-contacts-form-phone">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path d="M19.6031 16.8577L16.5229 20.0002C12.294 20.0012 8.06489 18.3557 4.83836 15.0639C1.61374 11.7739 0.000948559 7.46219 0 3.15019L3.08385 0.00390625L7.29134 4.29659L4.54775 7.09573C4.54822 9.21114 5.33944 11.3264 6.92144 12.9405C8.50435 14.5554 10.5791 15.3627 12.6538 15.3622L15.3956 12.5649L19.6031 16.8577Z" fill="#808080"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="19.6031" height="20" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    Телефон
+                  </label>
+                </div>
+              </div>
+              <div class="col-lg-4 px-3">
+                <div class="form-outline is-contacts__form-input">
+                  <input type="email" id="is-contacts-form-email" class="form-control" />
+                  <label class="form-label" for="is-contacts-form-email">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path d="M19.5904 4.13574L12.6992 9.99023L19.6021 14.6772V4.2677C19.6021 4.2227 19.5975 4.17879 19.5904 4.13574Z" fill="#808080"/>
+                        <path d="M12.0789 10.5186L11.2102 11.2566C10.8021 11.6033 10.3018 11.7766 9.80158 11.7766C9.30136 11.7766 8.80106 11.6033 8.39299 11.2566L7.52429 10.5186L0 15.6275V15.7327C0 16.1687 0.347687 16.5234 0.775011 16.5234H18.828C19.2554 16.5234 19.603 16.1687 19.603 15.7327V15.6275L12.0789 10.5186Z" fill="#808080"/>
+                        <path d="M18.8297 3.47754C18.8287 3.47754 18.8278 3.47754 18.8268 3.47754H0.77377C0.772812 3.47754 0.771893 3.47754 0.770936 3.47754C0.661511 3.47797 0.61415 3.6202 0.698229 3.69164L7.79213 9.71836C7.79298 9.71906 7.79382 9.71981 7.79466 9.72051L8.88765 10.6491C9.41647 11.0984 10.1842 11.0984 10.713 10.6491L18.9024 3.69164C18.9865 3.62016 18.9391 3.47793 18.8297 3.47754Z" fill="#808080"/>
+                        <path d="M0.0116776 4.13574C0.00455619 4.17879 0 4.22262 0 4.2677V14.6772L6.90285 9.9902L0.0116776 4.13574Z" fill="#808080"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="19.6031" height="20" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    E-mail
+                  </label>
+                </div>
+              </div>
+              <div class="col-lg-2 px-3 d-flex justify-content-center">
+                <input type="submit" class="is-contacts__form-btn" value="Отправить"/>
+              </div>
+            </div>
+            <div class="row mt-3 px-3 text-white">
+              <div class="col-lg-1"></div>
+              <div class="col-lg-11">
+                <div class="form-check">
+                  <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    С <a href="!#" class="text-white">Политикой конфиденциальности и обработки персональных данных</a> ознакомлен
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="row is-contacts__map">
+          <div class="col-lg-12">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae9632a300ad6ced5ca94ca598cdbdb2d00d20f9b66dba16311f7829a9a03d369&amp;width=100%25&amp;height=526&amp;lang=ru_RU&amp;scroll=true"></script>
+            <div class="is-contacts__map-info">
+              <div class="is-contacts__map-info__item">
+                <p class="is-contacts__map-info__item-title">
+                  <span>
+                    Наши телефоны
+                  </span>
+                </p>
+                  <?php while ( have_rows('system_phones', 'option') ) : the_row(); ?>
+                    <a href="tel:<? the_sub_field('phone', 'option'); ?>" class="is-contacts__map-info__item-link">
+                      <img src="<? echo get_template_directory_uri() . '/assets/img/phone.svg'; ?>" alt="<? the_sub_field('phone', 'option'); ?>">
+                        <? the_sub_field('phone', 'option'); ?>
+                    </a>
+                  <?php endwhile; ?>
+              </div>
+              <div class="is-contacts__map-info__item">
+                <p class="is-contacts__map-info__item-title address">
+                  <img src="<? echo get_template_directory_uri() . '/assets/img/map.svg'; ?>" alt="">
+                  <span>
+                    Адрес
+                  </span>
+                </p>
+                <a href="<? the_field('system_address_link', 'option'); ?>" class="is-contacts__map-info__item-link address">
+                    <? the_field('system_address', 'option'); ?>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <?php } else { ?>
+      <section id="is-theader" class="section is-theader container">
+        <div class="row">
+          <div class="col-lg-12">
 
-              get_template_part( 'template-parts/content', 'page' );
-
-              // If comments are open or we have at least one comment, load up the comment template.
-              if ( comments_open() || get_comments_number() ) :
-                  comments_template();
-              endif;
-
-          endwhile; // End of the loop.
-          ?>
-
+            <nav aria-label="breadcrumb" class="is-theader__breadcrumbs">
+                <?php
+                if ( function_exists('yoast_breadcrumb') ) {
+                    yoast_breadcrumb( '<ol id="breadcrumbs" class="breadcrumb is-theader__breadcrumbs-list">','</ol>' );
+                }
+                ?>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section id="is-contacts" class="section is-contacts container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="is-contacts__title">
+              <? the_title(); ?>
+            </h2>
+          </div>
+        </div>
+      </section>
       </main><!-- #main -->
    <?php }
   ?>

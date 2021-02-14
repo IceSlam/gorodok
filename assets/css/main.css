@@ -1405,10 +1405,9 @@
 .page:not(.home) .is-main .is-contacts__form {
 		margin-top: 4rem;
 		padding: 5.875rem 0;
-		background: url("../img/contacts_form_bg.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		background-repeat: !important;
+		background-size: cover !important;
+		background-position: center !important;
 }
 .page:not(.home) .is-main .is-contacts__form-title {
 		text-align: center;

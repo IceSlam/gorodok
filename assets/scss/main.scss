@@ -1639,11 +1639,10 @@
       &__form {
         margin-top: 4rem;
         padding: 5.875rem 0;
-        background: url('../img/contacts_form_bg.jpg');
-        background-repeat: no-repeat;
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center;
+        background-repeat:  !important;
+        -webkit-background-size: cover !important;
+        background-size: cover !important;
+        background-position: center !important;
         &-title {
           text-align: center;
           font-weight: 500;
