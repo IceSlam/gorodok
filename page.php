@@ -495,79 +495,52 @@ get_header();
             </div>
           </div>
           <div class="row is-news__cards-wrapper">
-            <div class="col-md-6 col-lg-4">
-              <div class="is-news__cards-wrapper__card card">
-                <div class="is-news__cards-wrapper__card-header" style="background: url('<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>');">
-                  <img
-                      src="<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>"
-                      class="card-img-top is-news__cards-wrapper__card-header__img img-fluid"
-                      alt="..."
-                  />
-                  <div class="is-news__cards-wrapper__card-header__badge">
-                    21.08.20
-                  </div>
-                </div>
-                <div class="card-body is-news__cards-wrapper__card-body">
-                  <h5 class="card-title is-news__cards-wrapper__card-body__title">
-                    Название новости длинное
-                  </h5>
-                  <a href="#!" class="btn is-news__cards-wrapper__card-body__btn">
-                    Подробнее
-                    <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" alt="Подробнее">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="is-news__cards-wrapper__card card">
-                <div class="is-news__cards-wrapper__card-header" style="background: url('<? echo get_template_directory_uri() . '/assets/img/index_news_item2.jpg'; ?>');">
-                  <img
-                      src="<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>"
-                      class="card-img-top is-news__cards-wrapper__card-header__img img-fluid"
-                      alt="..."
-                  />
-                  <div class="is-news__cards-wrapper__card-header__badge">
-                    21.08.20
-                  </div>
-                </div>
-                <div class="card-body is-news__cards-wrapper__card-body">
-                  <h5 class="card-title is-news__cards-wrapper__card-body__title">
-                    Название новости длинное
-                  </h5>
-                  <a href="#!" class="btn is-news__cards-wrapper__card-body__btn">
-                    Подробнее
-                    <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" alt="Подробнее">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="is-news__cards-wrapper__card card">
-                <div class="is-news__cards-wrapper__card-header" style="background: url('<? echo get_template_directory_uri() . '/assets/img/index_news_item3.jpg'; ?>');">
-                  <img
-                      src="<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>"
-                      class="card-img-top is-news__cards-wrapper__card-header__img img-fluid"
-                      alt="..."
-                  />
-                  <div class="is-news__cards-wrapper__card-header__badge">
-                    21.08.20
-                  </div>
-                </div>
-                <div class="card-body is-news__cards-wrapper__card-body">
-                  <h5 class="card-title is-news__cards-wrapper__card-body__title">
-                    Название новости длинное
-                  </h5>
-                  <a href="#!" class="btn is-news__cards-wrapper__card-body__btn">
-                    Подробнее
-                    <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" alt="Подробнее">
-                  </a>
-                </div>
-              </div>
-            </div>
+            <?
+              $args = array(
+                  'post_type'      => 'news',
+                  'post_status'    => 'publish',
+                  'posts_per_page' => 3,
+              );
+
+              $query = new WP_Query( $args );
+
+              if ( $query->have_posts() ) {
+                  while ( $query->have_posts() ) {
+                      $query->the_post(); ?>
+                    <div class="col-md-6 col-lg-4">
+                      <div class="is-news__cards-wrapper__card card">
+                        <div class="is-news__cards-wrapper__card-header" style="background: url('<?php the_post_thumbnail_url(); ?>');">
+                          <img
+                              src="<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>"
+                              class="card-img-top is-news__cards-wrapper__card-header__img img-fluid"
+                              alt="<? the_title(); ?>"
+                          />
+                          <div class="is-news__cards-wrapper__card-header__badge">
+                            <? echo get_the_date(); ?>
+                          </div>
+                        </div>
+                        <div class="card-body is-news__cards-wrapper__card-body">
+                          <h5 class="card-title is-news__cards-wrapper__card-body__title">
+                              <? the_title(); ?>
+                          </h5>
+                          <a href="<? the_permalink(); ?>" class="btn is-news__cards-wrapper__card-body__btn">
+                            Подробнее
+                            <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" alt="Подробнее">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                <?  }
+              } else {
+                  echo '<p class="text-center">Новостей не найдено</p>';
+              }
+
+              wp_reset_postdata();
+            ?>
           </div>
           <div class="row mt-5">
             <div class="col-md-12 d-flex justify-content-center">
-              <a href="https://gorodok17.ru/news" class="btn is-news__btn">
+              <a href="/news" class="btn is-news__btn" target="_blank">
                 Все новости
               </a>
             </div>
