@@ -319,7 +319,7 @@ function gorodok_post_type_news() {
         "show_in_nav_menus" => true,
         "delete_with_user" => false,
         "exclude_from_search" => false,
-        "capability_type" => "post",
+        "capability_type" => "page",
         "map_meta_cap" => true,
         "hierarchical" => true,
         "rewrite" => [ "slug" => "news", "with_front" => true ],
@@ -335,57 +335,3 @@ function gorodok_post_type_news() {
 
 add_action( 'init', 'gorodok_post_type_news' );
 
-/*
-=================================================================================
--------------- Категории новостей (News categories) -----------------------------
-=================================================================================
-*/
-
-function gorodok_news_categories() {
-
-    /**
-     * Taxonomy: Категории новостей.
-     */
-
-    $labels = [
-        "name" => __( "Категории новостей", "gorodok" ),
-        "singular_name" => __( "Категория", "gorodok" ),
-        "menu_name" => __( "Категории", "gorodok" ),
-        "all_items" => __( "Категории новостей", "gorodok" ),
-        "edit_item" => __( "Редактировать категорию", "gorodok" ),
-        "view_item" => __( "Просмотреть категорию", "gorodok" ),
-        "update_item" => __( "Обновить название категории", "gorodok" ),
-        "add_new_item" => __( "Добавить новую категорию", "gorodok" ),
-        "new_item_name" => __( "Новое название категории", "gorodok" ),
-        "parent_item" => __( "Родительская категория", "gorodok" ),
-        "parent_item_colon" => __( "Родительская категория:", "gorodok" ),
-        "search_items" => __( "Поиск по категориям", "gorodok" ),
-        "popular_items" => __( "Популярные категории", "gorodok" ),
-        "add_or_remove_items" => __( "Добавить или удалить категорию", "gorodok" ),
-        "choose_from_most_used" => __( "Выбрать из часто используемых категорий", "gorodok" ),
-        "not_found" => __( "Категорий не найдено", "gorodok" ),
-        "no_terms" => __( "Нет категорий", "gorodok" ),
-        "items_list_navigation" => __( "Навигация по категориям", "gorodok" ),
-        "items_list" => __( "Список категорий", "gorodok" ),
-        "back_to_items" => __( "Вернуться к категориям", "gorodok" ),
-    ];
-
-    $args = [
-        "label" => __( "Категории новостей", "gorodok" ),
-        "labels" => $labels,
-        "public" => true,
-        "publicly_queryable" => true,
-        "hierarchical" => true,
-        "show_ui" => true,
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "query_var" => true,
-        "has_archive" => true,
-        "rewrite" => [ 'slug' => 'news', 'with_front' => true, ],
-        "show_admin_column" => true,
-        "show_in_rest" => true,
-        "show_in_quick_edit" => true,
-    ];
-    register_taxonomy( "news", [ "news" ], $args );
-}
-add_action( 'init', 'gorodok_news_categories' );

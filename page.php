@@ -367,7 +367,7 @@ get_header();
         <div class="is-about__line-bold"></div>
         <div class="is-about__line-thin"></div>
       </section>
-      <section class="section is-trust">
+      <section id="is-trust" class="section is-trust">
         <div class="container-fluid is-trust__wrapper">
           <h2 class="is-trust__wrapper-title">
             Нам доверяют
@@ -485,7 +485,7 @@ get_header();
           </div>
         </div>
       </section>
-      <section id="news" class="section is-news">
+      <section id="is-news" class="section is-news">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -1140,7 +1140,6 @@ get_header();
           </div>
         </div>
       </section>
-      </main><!-- #main -->
    <?php }
   ?>
 

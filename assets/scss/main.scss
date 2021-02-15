@@ -1105,16 +1105,6 @@
 }
 
 .single {
-  .is-main {
-    .is-category-products {
-      &:before {
-        display: none;
-      }
-    }
-  }
-}
-
-.archive {
   .is-header {
     .is-navbar {
       background: url("../img/navbar_other_bg.png");
@@ -1129,16 +1119,92 @@
       padding-top: 13rem;
       &__breadcrumbs {
         &-list {
-          li {
+          a {
+            font-weight: 500;
+            font-size: .875rem;
+            color: $gorodokDarkBlue;
+          }
+          .breadcrumb_last {
+            color: $gorodokDarkBlue;
+          }
+          .breadcrumb_last,
+          .breadcrumb_last::before {
+            font-weight: 500;
+            font-size: .875rem;
+            color: $gorodokDarkBlue;
+          }
+          .breadcrumb_last::before {
+            content: var(--bs-breadcrumb-divider,"-");
+            margin-left: .25rem;
+            margin-right: .5rem;
+          }
+          span {
+            a + span {
+              a:before {
+                content: var(--bs-breadcrumb-divider,"-");
+                color: $gorodokDarkBlue;
+                margin-left: .25rem;
+                margin-right: .5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .is-category-products {
+      &:before {
+        display: none;
+      }
+    }
+    .is-news-single {
+      padding: 2rem 0 4rem;
+      background: $gorodokLightGray;
+      &__title {
+        color: $gorodokDarkBlue;
+        font-weight: bold;
+        font-size: 1.875rem;
+        text-transform: uppercase;
+      }
+      &__content {
+        color: $gorodokDarkBlue;
+      }
+    }
+  }
+}
+
+.archive,
+.category,
+.post-type-archive-news {
+  .is-header {
+    .is-navbar {
+      background: url("../img/navbar_other_bg.png");
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: top center;
+    }
+  }
+  .is-main {
+    .is-theader {
+      padding-top: 13rem;
+      &__breadcrumbs {
+        &-list {
+          span {
             font-weight: 500;
             font-size: .875rem;
             color: $gorodokDarkBlue;
             a {
               color: $gorodokDarkBlue;
             }
+            .breadcrumb_last {
+              &:before {
+                content: var(--bs-breadcrumb-divider,"-");
+                margin-left: .5rem;
+                margin-right: .5rem;
+              }
+            }
           }
-          li + li::before {
-            content: var(--bs-breadcrumb-divider,"-");
+          span + span::before {
           }
         }
       }
