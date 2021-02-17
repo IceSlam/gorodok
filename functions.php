@@ -157,7 +157,7 @@ function gorodok_scripts() {
     wp_enqueue_script( 'gorodok-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'JQuery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), 3.5, true );
     wp_enqueue_script( 'FancyBox', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array(), 3.5, true );
-    wp_enqueue_script( 'Bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), 5.0, true );
+    wp_enqueue_script( 'Bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), 5.0, true );
     wp_enqueue_script( 'MDBootstrap', get_template_directory_uri() . '/assets/js/mdb.min.js', array(), 5.0, true );
     wp_enqueue_script( 'UIKit', get_template_directory_uri() . '/assets/js/uikit.min.js', array(), 3.16, true );
     wp_enqueue_script( 'UIKit-icons', get_template_directory_uri() . '/assets/js/juikit-icons.min.js', array(), 3.16, true );
