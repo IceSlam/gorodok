@@ -122,7 +122,7 @@ get_header();
                     </svg>
                   </div>
                 </div>
-                <a class="is-working__cards__card__title">
+                <a href="<? echo get_term_link(51, 'services'); ?>" class="is-working__cards__card__title">
                   Рекламные конструкции
                 </a>
               </a>
@@ -136,7 +136,7 @@ get_header();
                     </svg>
                   </div>
                 </div>
-                <a class="is-working__cards__card__title">
+                <a href="<? echo get_term_link(52, 'services'); ?>" class="is-working__cards__card__title">
                   Широкоформатная печать
                 </a>
               </a>
@@ -151,7 +151,7 @@ get_header();
                     </svg>
                   </div>
                 </div>
-                <a class="is-working__cards__card__title">
+                <a href="<? echo get_term_link(53, 'services'); ?>" class="is-working__cards__card__title">
                   Полиграфия
                 </a>
               </a>
@@ -174,7 +174,7 @@ get_header();
                     </svg>
                   </div>
                 </div>
-                <a class="is-working__cards__card__title">
+                <a href="<? echo get_term_link(54, 'services'); ?>" class="is-working__cards__card__title">
                   Led-технологии
                 </a>
               </a>
@@ -198,7 +198,7 @@ get_header();
                     </svg>
                   </div>
                 </div>
-                <a class="is-working__cards__card__title">
+                <a href="<? echo get_term_link(55, 'services'); ?>" class="is-working__cards__card__title">
                   Производство и сувениры
                 </a>
               </a>
@@ -216,7 +216,7 @@ get_header();
                     </svg>
                   </div>
                 </div>
-                <a class="is-working__cards__card__title">
+                <a href="<? echo get_term_link(56, 'services'); ?>" class="is-working__cards__card__title">
                   УФ-печать
                 </a>
               </a>
