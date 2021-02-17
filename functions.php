@@ -230,7 +230,11 @@ function remove_footer_admin () {
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 
-/* ACF Custom Theme settings page */
+/*
+=================================================================================
+-------------- Страница пареметров темы -----------------------------------------
+=================================================================================
+*/
 
 if( function_exists('acf_add_options_page') ) {
 
@@ -326,7 +330,7 @@ function gorodok_post_type_news() {
         "query_var" => true,
         "supports" => [ "title", "editor", "thumbnail", "excerpt", "trackbacks", "custom-fields", "comments", "revisions", "author", "page-attributes", "post-formats" ],
         "taxonomies" => [ "news" ],
-        'menu_position'       => 2,
+        'menu_position'       => 8,
         'menu_icon'           => 'dashicons-align-left'
     ];
 
@@ -335,3 +339,244 @@ function gorodok_post_type_news() {
 
 add_action( 'init', 'gorodok_post_type_news' );
 
+/*
+=================================================================================
+----------------- Тип поста и категории для раздела Портфолио -------------------
+---------------------- Post type & Taxonomy for Portfolio -----------------------
+=================================================================================
+*/
+
+function gorodok_post_type_portfolio() {
+
+    $labels = [
+        "name" => __( "Портфолио", "gorodok" ),
+        "singular_name" => __( "Работа", "gorodok" ),
+        "menu_name" => __( "Портфолио", "gorodok" ),
+        "all_items" => __( "Все работы", "gorodok" ),
+        "add_new" => __( "Добавить работу", "gorodok" ),
+        "add_new_item" => __( "Добавить работу", "gorodok" ),
+        "edit_item" => __( "Редактировать работу", "gorodok" ),
+        "new_item" => __( "Новая работа", "gorodok" ),
+        "view_item" => __( "Просмотреть работу", "gorodok" ),
+        "view_items" => __( "Просмотреть работы", "gorodok" ),
+        "search_items" => __( "Поиск работ", "gorodok" ),
+        "not_found" => __( "Работ не найдено", "gorodok" ),
+        "not_found_in_trash" => __( "В корзине не найдено работ", "gorodok" ),
+        "parent" => __( "Родительские работы:", "gorodok" ),
+        "featured_image" => __( "Изображение работы", "gorodok" ),
+        "set_featured_image" => __( "Установить изображение работы", "gorodok" ),
+        "remove_featured_image" => __( "Удалоить изображение работы", "gorodok" ),
+        "use_featured_image" => __( "Использовать изображение по умолчанию", "gorodok" ),
+        "archives" => __( "Портфолио", "gorodok" ),
+        "insert_into_item" => __( "Вставить в работу", "gorodok" ),
+        "uploaded_to_this_item" => __( "Загружено в работу", "gorodok" ),
+        "filter_items_list" => __( "Фильтр по портфолио", "gorodok" ),
+        "items_list_navigation" => __( "Навигация по списку работ", "gorodok" ),
+        "items_list" => __( "Список работ", "gorodok" ),
+        "attributes" => __( "Атрибуты работ", "gorodok" ),
+        "name_admin_bar" => __( "Работа", "gorodok" ),
+        "item_published" => __( "Работа опубликована", "gorodok" ),
+        "item_published_privately" => __( "Работа опубликована приватно", "gorodok" ),
+        "item_reverted_to_draft" => __( "Работа в черновике", "gorodok" ),
+        "item_scheduled" => __( "Работа по расписанию", "gorodok" ),
+        "item_updated" => __( "Работа обновлена", "gorodok" ),
+        "parent_item_colon" => __( "Родительские работы:", "gorodok" ),
+    ];
+
+    $args = [
+        "label" => __( "Работы", "gorodok" ),
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "portfolio",
+        "rest_controller_class" => "WP_REST_Posts_Controller",
+        "has_archive" => true,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "delete_with_user" => false,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => true,
+        "rewrite" => [ "slug" => "portfolio", "with_front" => true ],
+        "query_var" => true,
+        "supports" => [ "title", "editor", "thumbnail", "excerpt", "trackbacks", "custom-fields", "comments", "revisions", "author", "page-attributes", "post-formats" ],
+        'menu_position'       => 7,
+        'menu_icon'           => 'dashicons-layout'
+    ];
+
+    register_post_type( "portfolio", $args );
+}
+
+add_action( 'init', 'gorodok_post_type_portfolio' );
+
+function gorodok_tax_portfolio() {
+
+    $labels = [
+        "name" => __( "Категории работ", "gorodok" ),
+        "singular_name" => __( "Категория работ", "gorodok" ),
+        "menu_name" => __( "Категории работ", "gorodok" ),
+        "all_items" => __( "Все категории", "gorodok" ),
+        "edit_item" => __( "Редактировать категорию", "gorodok" ),
+        "view_item" => __( "Просмотреть категорию", "gorodok" ),
+        "update_item" => __( "Обновить название категории", "gorodok" ),
+        "add_new_item" => __( "Добавить новую категорию", "gorodok" ),
+        "new_item_name" => __( "Новое название категории", "gorodok" ),
+        "parent_item" => __( "Родительская категория", "gorodok" ),
+        "parent_item_colon" => __( "Родительская категория:", "gorodok" ),
+        "search_items" => __( "Поиск по категориям", "gorodok" ),
+        "popular_items" => __( "Популярные категории", "gorodok" ),
+        "separate_items_with_commas" => __( "Разделить категории запятыми", "gorodok" ),
+        "add_or_remove_items" => __( "Добавить или удалить категорию", "gorodok" ),
+        "choose_from_most_used" => __( "Выбрать из часто используемых категорий", "gorodok" ),
+        "not_found" => __( "Категорий не найдено", "gorodok" ),
+        "no_terms" => __( "Нет категорий", "gorodok" ),
+        "items_list_navigation" => __( "Навигация по категориям", "gorodok" ),
+        "items_list" => __( "Список категорий", "gorodok" ),
+        "back_to_items" => __( "Вернуться к категориям", "gorodok" ),
+    ];
+
+    $args = [
+        "label" => __( "Категории работ", "gorodok" ),
+        "labels" => $labels,
+        "public" => true,
+        "publicly_queryable" => true,
+        "hierarchical" => true,
+        "show_ui" => true,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "query_var" => true,
+        "rewrite" => [ 'slug' => 'portfolio_tax', 'with_front' => true,  'hierarchical' => true, ],
+        "show_admin_column" => true,
+        "show_in_rest" => true,
+        "rest_base" => "portfolio-tax",
+        "rest_controller_class" => "WP_REST_Terms_Controller",
+        "show_in_quick_edit" => true,
+    ];
+    register_taxonomy( "portfolio_tax", [ "portfolio" ], $args );
+}
+add_action( 'init', 'gorodok_tax_portfolio' );
+
+/*
+=================================================================================
+------------------- Тип поста и категории для раздела Услуги --------------------
+---------------------- Post type & Taxonomy for Services -----------------------
+=================================================================================
+*/
+
+function gorodok_post_type_catalog() {
+
+    $labels = [
+        "name" => __( "Каталог услуг", "gorodok" ),
+        "singular_name" => __( "Услуга", "gorodok" ),
+        "menu_name" => __( "Услуги", "gorodok" ),
+        "all_items" => __( "Все услуги", "gorodok" ),
+        "add_new" => __( "Добавить услугу", "gorodok" ),
+        "add_new_item" => __( "Добавить услугу", "gorodok" ),
+        "edit_item" => __( "Редактировать услугу", "gorodok" ),
+        "new_item" => __( "Новая услуга", "gorodok" ),
+        "view_item" => __( "Просмотреть услугу", "gorodok" ),
+        "view_items" => __( "Просмотреть услуги", "gorodok" ),
+        "search_items" => __( "Поиск услуг", "gorodok" ),
+        "not_found" => __( "Услуг не найдено", "gorodok" ),
+        "not_found_in_trash" => __( "В корзине не найдено услуг", "gorodok" ),
+        "parent" => __( "Родительские услуги:", "gorodok" ),
+        "featured_image" => __( "Изображение услуги", "gorodok" ),
+        "set_featured_image" => __( "Установить изображение услуги", "gorodok" ),
+        "remove_featured_image" => __( "Удалоить изображение услуги", "gorodok" ),
+        "use_featured_image" => __( "Использовать изображение по умолчанию", "gorodok" ),
+        "archives" => __( "Каталог услуг", "gorodok" ),
+        "insert_into_item" => __( "Вставить в услугу", "gorodok" ),
+        "uploaded_to_this_item" => __( "Загружено в услугу", "gorodok" ),
+        "filter_items_list" => __( "Фильтр по услугам", "gorodok" ),
+        "items_list_navigation" => __( "Навигация по списку услуг", "gorodok" ),
+        "items_list" => __( "Список услуг", "gorodok" ),
+        "attributes" => __( "Атрибуты услуг", "gorodok" ),
+        "name_admin_bar" => __( "Услуга", "gorodok" ),
+        "item_published" => __( "Услуга опубликована", "gorodok" ),
+        "item_published_privately" => __( "Услуга опубликована приватно", "gorodok" ),
+        "item_reverted_to_draft" => __( "Услуга в черновике", "gorodok" ),
+        "item_scheduled" => __( "Услуга по расписанию", "gorodok" ),
+        "item_updated" => __( "Услуга обновлена", "gorodok" ),
+        "parent_item_colon" => __( "Родительские услуги:", "gorodok" ),
+    ];
+
+    $args = [
+        "label" => __( "Услуги", "gorodok" ),
+        "labels" => $labels,
+        "description" => "Список услуг компании Город'ОК",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "catalog",
+        "rest_controller_class" => "WP_REST_Posts_Controller",
+        "has_archive" => true,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "delete_with_user" => false,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => [ "slug" => "catalog", "with_front" => true ],
+        "query_var" => true,
+        "supports" => [ "title", "editor", "thumbnail", "excerpt", "trackbacks", "custom-fields", "comments", "revisions", "author", "page-attributes", "post-formats" ],
+        'menu_position'       => 2,
+        'menu_icon'           => 'dashicons-media-document'
+    ];
+
+    register_post_type( "catalog", $args );
+}
+
+add_action( 'init', 'gorodok_post_type_catalog' );
+
+function gorodok_tax_services() {
+
+    $labels = [
+        "name" => __( "Категории услуг", "gorodok" ),
+        "singular_name" => __( "Категория услуг", "gorodok" ),
+        "menu_name" => __( "Категории услуг", "gorodok" ),
+        "all_items" => __( "Все категории", "gorodok" ),
+        "edit_item" => __( "Редактировать категорию", "gorodok" ),
+        "view_item" => __( "Просмотреть категорию", "gorodok" ),
+        "update_item" => __( "Обновить название категории", "gorodok" ),
+        "add_new_item" => __( "Добавить новую категорию", "gorodok" ),
+        "new_item_name" => __( "Новое название категории", "gorodok" ),
+        "parent_item" => __( "Родительская категория", "gorodok" ),
+        "parent_item_colon" => __( "Родительская категория:", "gorodok" ),
+        "search_items" => __( "Поиск по категориям", "gorodok" ),
+        "popular_items" => __( "Популярные категории", "gorodok" ),
+        "separate_items_with_commas" => __( "Разделить категории запятыми", "gorodok" ),
+        "add_or_remove_items" => __( "Добавить или удалить категорию", "gorodok" ),
+        "choose_from_most_used" => __( "Выбрать из часто используемых категорий", "gorodok" ),
+        "not_found" => __( "Категорий не найдено", "gorodok" ),
+        "no_terms" => __( "Нет категорий", "gorodok" ),
+        "items_list_navigation" => __( "Навигация по категориям", "gorodok" ),
+        "items_list" => __( "Список категорий", "gorodok" ),
+        "back_to_items" => __( "Вернуться к категориям", "gorodok" ),
+    ];
+
+    $args = [
+        "label" => __( "Категории услуг", "gorodok" ),
+        "labels" => $labels,
+        "public" => true,
+        "publicly_queryable" => true,
+        "hierarchical" => true,
+        "show_ui" => true,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "query_var" => true,
+        "rewrite" => [ 'slug' => 'services_tax', 'with_front' => true,  'hierarchical' => true, ],
+        "show_admin_column" => true,
+        "show_in_rest" => true,
+        "rest_base" => "services-tax",
+        "rest_controller_class" => "WP_REST_Terms_Controller",
+        "show_in_quick_edit" => true,
+    ];
+    register_taxonomy( "services_tax", [ "catalog" ], $args );
+}
+add_action( 'init', 'gorodok_tax_services' );
