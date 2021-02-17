@@ -9,6 +9,10 @@
   text-decoration: none !important;
 }
 
+.tab-content > .active {
+  display: inherit !important;
+}
+
 .form-check-input[type="checkbox"]:checked {
   background-color: $gorodokRed;
 }
@@ -1189,22 +1193,34 @@
       padding-top: 13rem;
       &__breadcrumbs {
         &-list {
-          span {
+          a {
             font-weight: 500;
             font-size: .875rem;
             color: $gorodokDarkBlue;
-            a {
-              color: $gorodokDarkBlue;
-            }
-            .breadcrumb_last {
-              &:before {
+          }
+          .breadcrumb_last {
+            color: $gorodokDarkBlue;
+          }
+          .breadcrumb_last,
+          .breadcrumb_last::before {
+            font-weight: 500;
+            font-size: .875rem;
+            color: $gorodokDarkBlue;
+          }
+          .breadcrumb_last::before {
+            content: var(--bs-breadcrumb-divider,"-");
+            margin-left: .25rem;
+            margin-right: .5rem;
+          }
+          span {
+            a + span {
+              a:before {
                 content: var(--bs-breadcrumb-divider,"-");
-                margin-left: .5rem;
+                color: $gorodokDarkBlue;
+                margin-left: .25rem;
                 margin-right: .5rem;
               }
             }
-          }
-          span + span::before {
           }
         }
       }
@@ -1265,6 +1281,25 @@
             font-weight: 500;
           }
           &:hover {
+            transition: all .5s;
+            -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+            .is-catlist__catbtns-card__img {
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+              background: $gorodokRed;
+              transition: background .5s;
+              svg {
+                path {
+                  fill: #fff;
+                  transition: fill .5s;
+                }
+              }
+            }
+          }
+          &.active {
             transition: all .5s;
             -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
             -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);

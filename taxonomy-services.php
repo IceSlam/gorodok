@@ -258,7 +258,7 @@ get_header();
                 'posts_per_page' => - 1,
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'services',
+                        'taxonomy' => 'services_tax',
                         'field'    => 'slug',
                         'terms'    => 'adsbuildings'
                     )
@@ -315,7 +315,7 @@ get_header();
                 'posts_per_page' => - 1,
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'services',
+                        'taxonomy' => 'services_tax',
                         'field'    => 'slug',
                         'terms'    => 'large-format-printing'
                     )
@@ -372,7 +372,7 @@ get_header();
                 'posts_per_page' => - 1,
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'services',
+                        'taxonomy' => 'services_tax',
                         'field'    => 'slug',
                         'terms'    => 'polygraphy'
                     )
@@ -429,7 +429,7 @@ get_header();
                 'posts_per_page' => - 1,
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'services',
+                        'taxonomy' => 'services_tax',
                         'field'    => 'slug',
                         'terms'    => 'led-tech'
                     )
@@ -486,7 +486,7 @@ get_header();
                 'posts_per_page' => - 1,
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'services',
+                        'taxonomy' => 'services_tax',
                         'field'    => 'slug',
                         'terms'    => 'souvenirs'
                     )
@@ -543,7 +543,7 @@ get_header();
                 'posts_per_page' => - 1,
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'services',
+                        'taxonomy' => 'services_tax',
                         'field'    => 'slug',
                         'terms'    => 'uv-printing'
                     )

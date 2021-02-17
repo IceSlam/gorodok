@@ -570,13 +570,14 @@ function gorodok_tax_services() {
         "show_in_menu" => true,
         "show_in_nav_menus" => true,
         "query_var" => true,
-        "rewrite" => [ 'slug' => 'services_tax', 'with_front' => true,  'hierarchical' => true, ],
+        "rewrite" => [ 'slug' => 'services', 'with_front' => true,  'hierarchical' => true, ],
         "show_admin_column" => true,
+        "has_archive" => true,
         "show_in_rest" => true,
-        "rest_base" => "services-tax",
+        "rest_base" => "services",
         "rest_controller_class" => "WP_REST_Terms_Controller",
         "show_in_quick_edit" => true,
     ];
-    register_taxonomy( "services_tax", [ "catalog" ], $args );
+    register_taxonomy( "services", [ "catalog" ], $args );
 }
 add_action( 'init', 'gorodok_tax_services' );
