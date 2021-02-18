@@ -1165,6 +1165,7 @@
 }
 .single .is-main .is-category-products__card-wrapper__img {
 		padding: 1rem;
+		max-height: 400px;
 }
 .single .is-main .is-category-products__card-wrapper__img-inner {
 		border-radius: 10px;

@@ -580,156 +580,32 @@ get_header();
 
                 </div>
                 <ul class="uk-slider-items uk-grid">
-                  <li class="uk-width-2-5">
-                    <div class="uk-panel is-reviews__slider-slide">
-                      <div class="is-reviews__slider-slide__img" style="background: url('<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_slide2.png'; ?>');"></div>
-                      <h5 class="is-reviews__slider-slide__title">
-                        Ибрагим
-                      </h5>
-                      <p class="is-reviews__slider-slide__company">
-                        Промвест Холдинг
-                      </p>
-                      <div class="is-reviews__slider-slide__review">
-                        <p>
-                          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eaque eos eum eveniet fugiat mollitia, quo? </span>
-                        </p>
-                        <p>
-                          <span>Aliquam at cumque deleniti facere inventore ipsum obcaecati odio praesentium recusandae tempora. </span>
-                        </p>
-                        <p>
-                          <span>Accusantium aut commodi cumque deleniti deserunt, iure obcaecati optio possimus temporibus unde veniam, voluptate.</span>
-                        </p>
-                      </div>
-                      <a href="!#" class="is-reviews__slider-slide__more">
-                        Подробнее
-                        <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_more.svg'; ?>" alt="Больше">
-                      </a>
-                      <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_quote.svg'; ?>" alt="Цитата" class="is-reviews__slider-slide__quote">
-                      <div class="is-reviews__slider-slide__badge">
-                        21.08.20
-                      </div>
-                    </div>
-                  </li>
-                  <li class="uk-width-2-5">
-                    <div class="uk-panel is-reviews__slider-slide">
-                      <div class="is-reviews__slider-slide__img" style="background: url('<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_slide2.png'; ?>');"></div>
-                      <h5 class="is-reviews__slider-slide__title">
-                        Ибрагим
-                      </h5>
-                      <p class="is-reviews__slider-slide__company">
-                        Промвест Холдинг
-                      </p>
-                      <div class="is-reviews__slider-slide__review">
-                        <p>
-                          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eaque eos eum eveniet fugiat mollitia, quo? </span>
-                        </p>
-                        <p>
-                          <span>Aliquam at cumque deleniti facere inventore ipsum obcaecati odio praesentium recusandae tempora. </span>
-                        </p>
-                        <p>
-                          <span>Accusantium aut commodi cumque deleniti deserunt, iure obcaecati optio possimus temporibus unde veniam, voluptate.</span>
-                        </p>
-                      </div>
-                      <a href="!#" class="is-reviews__slider-slide__more">
-                        Подробнее
-                        <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_more.svg'; ?>" alt="Больше">
-                      </a>
-                      <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_quote.svg'; ?>" alt="Цитата" class="is-reviews__slider-slide__quote">
-                      <div class="is-reviews__slider-slide__badge">
-                        21.08.20
-                      </div>
-                    </div>
-                  </li>
-                  <li class="uk-width-2-5">
-                    <div class="uk-panel is-reviews__slider-slide">
-                      <div class="is-reviews__slider-slide__img" style="background: url('<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_slide2.png'; ?>');"></div>
-                      <h5 class="is-reviews__slider-slide__title">
-                        Ибрагим
-                      </h5>
-                      <p class="is-reviews__slider-slide__company">
-                        Промвест Холдинг
-                      </p>
-                      <div class="is-reviews__slider-slide__review">
-                        <p>
-                          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eaque eos eum eveniet fugiat mollitia, quo? </span>
-                        </p>
-                        <p>
-                          <span>Aliquam at cumque deleniti facere inventore ipsum obcaecati odio praesentium recusandae tempora. </span>
-                        </p>
-                        <p>
-                          <span>Accusantium aut commodi cumque deleniti deserunt, iure obcaecati optio possimus temporibus unde veniam, voluptate.</span>
-                        </p>
-                      </div>
-                      <a href="!#" class="is-reviews__slider-slide__more">
-                        Подробнее
-                        <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_more.svg'; ?>" alt="Больше">
-                      </a>
-                      <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_quote.svg'; ?>" alt="Цитата" class="is-reviews__slider-slide__quote">
-                      <div class="is-reviews__slider-slide__badge">
-                        21.08.20
-                      </div>
-                    </div>
-                  </li>
-                  <li class="uk-width-2-5">
-                    <div class="uk-panel is-reviews__slider-slide">
-                      <div class="is-reviews__slider-slide__img" style="background: url('<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_slide2.png'; ?>');"></div>
-                      <h5 class="is-reviews__slider-slide__title">
-                        Ибрагим
-                      </h5>
-                      <p class="is-reviews__slider-slide__company">
-                        Промвест Холдинг
-                      </p>
-                      <div class="is-reviews__slider-slide__review">
-                        <p>
-                          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eaque eos eum eveniet fugiat mollitia, quo? </span>
-                        </p>
-                        <p>
-                          <span>Aliquam at cumque deleniti facere inventore ipsum obcaecati odio praesentium recusandae tempora. </span>
-                        </p>
-                        <p>
-                          <span>Accusantium aut commodi cumque deleniti deserunt, iure obcaecati optio possimus temporibus unde veniam, voluptate.</span>
-                        </p>
-                      </div>
-                      <a href="!#" class="is-reviews__slider-slide__more">
-                        Подробнее
-                        <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_more.svg'; ?>" alt="Больше">
-                      </a>
-                      <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_quote.svg'; ?>" alt="Цитата" class="is-reviews__slider-slide__quote">
-                      <div class="is-reviews__slider-slide__badge">
-                        21.08.20
-                      </div>
-                    </div>
-                  </li>
-                  <li class="uk-width-2-5">
-                    <div class="uk-panel is-reviews__slider-slide">
-                      <div class="is-reviews__slider-slide__img" style="background: url('<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_slide2.png'; ?>');"></div>
-                      <h5 class="is-reviews__slider-slide__title">
-                        Ибрагим
-                      </h5>
-                      <p class="is-reviews__slider-slide__company">
-                        Промвест Холдинг
-                      </p>
-                      <div class="is-reviews__slider-slide__review">
-                        <p>
-                          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eaque eos eum eveniet fugiat mollitia, quo? </span>
-                        </p>
-                        <p>
-                          <span>Aliquam at cumque deleniti facere inventore ipsum obcaecati odio praesentium recusandae tempora. </span>
-                        </p>
-                        <p>
-                          <span>Accusantium aut commodi cumque deleniti deserunt, iure obcaecati optio possimus temporibus unde veniam, voluptate.</span>
-                        </p>
-                      </div>
-                      <a href="!#" class="is-reviews__slider-slide__more">
-                        Подробнее
-                        <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_more.svg'; ?>" alt="Больше">
-                      </a>
-                      <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_quote.svg'; ?>" alt="Цитата" class="is-reviews__slider-slide__quote">
-                      <div class="is-reviews__slider-slide__badge">
-                        21.08.20
-                      </div>
-                    </div>
-                  </li>
+                    <?php
+                    while ( have_rows('about_reviews') ) : the_row();
+                        ?>
+                      <li class="uk-width-2-5">
+                        <div class="uk-panel is-reviews__slider-slide">
+                          <div class="is-reviews__slider-slide__img" style="background: url('<? the_sub_field('photo'); ?>');"></div>
+                          <h5 class="is-reviews__slider-slide__title">
+                            <? the_sub_field('name'); ?>
+                          </h5>
+                          <p class="is-reviews__slider-slide__company">
+                            <? the_sub_field('company'); ?>
+                          </p>
+                          <div class="is-reviews__slider-slide__review">
+                            <? the_sub_field('review'); ?>
+                          </div>
+                          <a href="!#" class="is-reviews__slider-slide__more">
+                            Подробнее
+                            <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_more.svg'; ?>" alt="Больше">
+                          </a>
+                          <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_quote.svg'; ?>" alt="Цитата" class="is-reviews__slider-slide__quote">
+                          <div class="is-reviews__slider-slide__badge">
+                            <? the_sub_field('date'); ?>
+                          </div>
+                        </div>
+                      </li>
+                    <?php endwhile; ?>
                 </ul>
 
                 <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
@@ -963,6 +839,11 @@ get_header();
             <h2 class="is-contacts__title">
               <? the_title(); ?>
             </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <? the_content(); ?>
           </div>
         </div>
       </section>

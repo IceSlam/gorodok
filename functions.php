@@ -239,7 +239,7 @@ add_filter('admin_footer_text', 'remove_footer_admin');
 if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page(array(
-        'page_title' 	=> 'Настройки темы ГородОК',
+        'page_title' 	=> "Настройки темы Город'ОК",
         'menu_title'	=> 'Настройки темы',
         'menu_slug' 	=> 'theme-custom-settings',
         'capability'	=> 'edit_posts',
