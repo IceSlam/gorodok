@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-    <?php $postType = get_query_var('post_type');
+    <?
     if ( is_post_type_archive('catalog') ) {
         ?>
       <section id="is-theader" class="section is-theader container" style="padding-bottom: 1rem;">
