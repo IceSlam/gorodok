@@ -336,12 +336,6 @@ get_header();
                 <div class="row">
                     <div class="col-lg-3">
                         <? the_post_thumbnail(); ?>
-                        <p class="is-news-single__date">
-                            <i class="fas fa-clock"></i> Дата публикации: <? the_date(); ?>
-                        </p>
-                        <p class="is-news-single__author">
-                            <i class="fas fa-user"></i> Автор: <? the_author(); ?>
-                        </p>
                     </div>
                     <div class="col-lg-9">
                         <div class="row">
@@ -356,6 +350,13 @@ get_header();
                         </div>
                     </div>
                 </div>
+              <div class="row mt-5">
+                <div class="col-lg-12">
+                  <h2 class="is-news-single__title">
+                      Галерея
+                  </h2>
+                </div>
+              </div>
             </div>
         </section>
     <?}

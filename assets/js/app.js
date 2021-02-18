@@ -39,9 +39,9 @@ $('.is-reviews__slider-slide__more').click(function(eventObject){
     $(this).toggleClass('rotate');
     $(this).parent().find('.is-reviews__slider-slide__review').toggleClass('show');
     if ($(this).parent().find('.is-reviews__slider-slide__review').hasClass('show')) {
-        $(this).html('Скрыть <img src="./assets/img/about_page_reviews_more.svg" alt="Скрыть">');
+        $(this).html('Скрыть <img src="https://14.al-dev.ru/wp-content/themes/gorodok/assets/img/about_page_reviews_more.svg" alt="Скрыть">');
     } else {
-        $(this).html('Подробнее <img src="./assets/img/about_page_reviews_more.svg" alt="Больше">');
+        $(this).html('Подробнее <img src="https://14.al-dev.ru/wp-content/themes/gorodok/assets/img/about_page_reviews_more.svg" alt="Больше">');
     }
     return false;
 });
