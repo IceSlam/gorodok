@@ -1,7 +1,0 @@
-.idea
-prepros.config
-phpcs.xml.dist
-composer.json
-.stylelintrc.json
-.gitattributes
-.eslintrc
