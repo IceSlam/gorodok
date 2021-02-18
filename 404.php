@@ -85,19 +85,19 @@
         content: "";
         position: absolute;
         left: 0;
-        width: 100%;
-        height: 0;
+        width: 0;
+        height: 100%;
         background: #BC1515;
         z-index: -1;
         transition: 0.3s;
         bottom: 0;
-        border-radius: 50% 50% 0 0;
+        border-radius: 0 30% 30% 0;
     }
     .error-box a:hover {
         color: #fff;
     }
     .error-box a:hover:before {
-        height: 180%;
+        width: 180%;
     }
     .error-box::after {
         content: "404";

@@ -581,3 +581,16 @@ function gorodok_tax_services() {
     register_taxonomy( "services", [ "catalog" ], $args );
 }
 add_action( 'init', 'gorodok_tax_services' );
+
+add_action('admin_menu', 'remove_admin_menu');
+function remove_admin_menu() {
+    remove_menu_page('edit.php');
+    remove_menu_page('tools.php');
+    remove_menu_page('edit-comments.php');
+    remove_menu_page('themes.php');
+    remove_menu_page('plugins.php');
+    remove_menu_page('users.php');
+    remove_menu_page( 'options-general.php');
+    remove_menu_page( 'duplicator' );
+    remove_menu_page( 'edit.php?post_type=acf-field-group' );
+}
