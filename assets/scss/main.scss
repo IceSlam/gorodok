@@ -352,12 +352,16 @@
               }
             }
             .form-control {
-              height: 64px;
+              height: 48px;
               background: #ffffff;
-              border-radius: 10px;
-              border: 1px solid transparent;
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              border-radius: 5px;
+              -webkit-box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+              -moz-box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+              box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
               &:focus {
-                border: 1px solid transparent;
+                border: 1px solid $gorodokRed;
               }
               &:focus ~ .form-label {
                 transform: translateY(-1.2rem) translateY(.1rem) scale(.8);
@@ -369,10 +373,19 @@
                 }
               }
             }
+            textarea {
+              &.form-control {
+                height: 80px;
+              }
+            }
             .form-label {
-              top: .65rem;
+              margin-top: 1rem;
               display: flex;
               align-items: center;
+              font-size: .8rem;
+              color: $gorodokDarkBlue;
+              text-transform: uppercase;
+              font-weight: 500;
               svg {
                 margin-right: .5rem;
               }
@@ -380,9 +393,13 @@
             .modal-footer {
               border-top: 0px;
               display: flex;
-              justify-content: space-between;
+              justify-content: space-around;
+              .ajax-loader {
+                display: none;
+              }
             }
             .btn {
+              height: 44px;
               -webkit-box-shadow: none;
               -moz-box-shadow: none;
               box-shadow: none;

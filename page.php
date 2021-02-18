@@ -91,14 +91,14 @@ get_header();
             <? } ?>
         </div>
       </section>
-      <section id="is-working" class="section is-working">
+      <section id="is-working" class="section is-working":>
         <div class="container">
           <h2>
             Мы работаем для Вас!
           </h2>
           <div class="row is-working__cards">
             <div class="col-md-6 col-lg-4 mt-3">
-              <a href="!#" class="is-working__cards__card card">
+              <a href="<? echo get_term_link(51, 'services'); ?>" class="is-working__cards__card card">
                 <div class="is-working__cards__card__border">
                   <div class="is-working__cards__card__content">
                     <svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +128,7 @@ get_header();
               </a>
             </div>
             <div class="col-md-6 col-lg-4 mt-3">
-              <a href="!#" class="is-working__cards__card card">
+              <a href="<? echo get_term_link(52, 'services'); ?>" class="is-working__cards__card card">
                 <div class="is-working__cards__card__border">
                   <div class="is-working__cards__card__content">
                     <svg width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +142,7 @@ get_header();
               </a>
             </div>
             <div class="col-md-6 col-lg-4 mt-3">
-              <a href="!#" class="is-working__cards__card card">
+              <a href="<? echo get_term_link(53, 'services'); ?>" class="is-working__cards__card card">
                 <div class="is-working__cards__card__border">
                   <div class="is-working__cards__card__content">
                     <svg width="101" height="55" viewBox="0 0 101 55" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -157,7 +157,7 @@ get_header();
               </a>
             </div>
             <div class="col-md-6 col-lg-4 mt-3">
-              <a href="!#" class="is-working__cards__card card">
+              <a href="<? echo get_term_link(54, 'services'); ?>" class="is-working__cards__card card">
                 <div class="is-working__cards__card__border">
                   <div class="is-working__cards__card__content">
                     <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -180,7 +180,7 @@ get_header();
               </a>
             </div>
             <div class="col-md-6 col-lg-4 mt-3">
-              <a href="!#" class="is-working__cards__card card">
+              <a href="<? echo get_term_link(55, 'services'); ?>" class="is-working__cards__card card">
                 <div class="is-working__cards__card__border">
                   <div class="is-working__cards__card__content">
                     <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +204,7 @@ get_header();
               </a>
             </div>
             <div class="col-md-6 col-lg-4 mt-3">
-              <a href="!#" class="is-working__cards__card card">
+              <a href="<? echo get_term_link(56, 'services'); ?>" class="is-working__cards__card card">
                 <div class="is-working__cards__card__border">
                   <div class="is-working__cards__card__content">
                     <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -222,92 +222,7 @@ get_header();
               </a>
             </div>
           </div>
-          <div class="row section__order">
-            <div class="col-md-12">
-              <div class="section__order__block" style="background: url(<? echo get_template_directory_uri() . '/assets/img/index_working_order_bg.png'; ?>), #122042;);">
-                <h4 class="section__order__block__title">
-                  Запросить расчеты
-                </h4>
-                <button
-                    type="button"
-                    class="btn section__order__block__btn"
-                    data-mdb-toggle="modal"
-                    data-mdb-target="#section-order-modal"
-                >
-                  Оставить заявку
-                </button>
-                <div
-                    class="modal fade section__order__modal"
-                    id="section-order-modal"
-                    tabindex="-1"
-                    aria-labelledby="section-order-modal-label"
-                    aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="section-order-modal-label">
-                          Оставить заявку
-                        </h5>
-                        <button
-                            type="button"
-                            class="btn-close"
-                            data-mdb-dismiss="modal"
-                            aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-
-                          <div class="form-outline mb-4">
-                            <input type="text" id="section-order-form-name" class="form-control" />
-                            <label class="form-label" for="section-order-form-name">
-                              Ваше имя
-                            </label>
-                          </div>
-
-                          <div class="form-outline mb-4">
-                            <input type="email" id="section-order-form-email" class="form-control" />
-                            <label class="form-label" for="section-order-form-email">
-                              Ваш E-mail
-                            </label>
-                          </div>
-
-                          <div class="form-outline mb-4">
-                            <textarea class="form-control" id="section-order-form-message" rows="4"></textarea>
-                            <label class="form-label" for="section-order-form-message">
-                              Ваше сообщение
-                            </label>
-                          </div>
-
-                          <div class="form-check d-flex mb-4 px-0" >
-                            <input
-                                class="form-check-input me-0 mx-0"
-                                type="checkbox"
-                                value=""
-                                id="form4Example4"
-                                style="margin-left: 1rem;width: 16px;height: 16px;"
-                            />
-                            <label class="form-check-label mx-3" for="form4Example4">
-                              С <a href="!#" style="color: #c23a3a;">Политикой конфиденциальности и обработки персональных данных</a> ознакомлен
-                            </label>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn is-btn-close" data-mdb-dismiss="modal">
-                              Отмена
-                            </button>
-                            <button type="submit" class="btn">
-                              Отправить
-                            </button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <? get_template_part( 'template-parts/form', 'order' ); ?>
           <img src="<? echo get_template_directory_uri() . '/assets/img/index_working_right_round_bg.svg'; ?>" alt="Мы работаем для Вас! " class="is-working__round-right">
         </div>
       </section>
@@ -397,92 +312,7 @@ get_header();
 
         </div>
         <div class="container">
-          <div class="row section__order">
-            <div class="col-md-12">
-              <div class="section__order__block" style="background: url(<? echo get_template_directory_uri() . '/assets/img/index_working_order_bg.png'; ?>), #122042;);">
-                <h4 class="section__order__block__title">
-                  Запросить расчеты
-                </h4>
-                <button
-                    type="button"
-                    class="btn section__order__block__btn"
-                    data-mdb-toggle="modal"
-                    data-mdb-target="#section-order-modal"
-                >
-                  Оставить заявку
-                </button>
-                <div
-                    class="modal fade section__order__modal"
-                    id="section-order-modal"
-                    tabindex="-1"
-                    aria-labelledby="section-order-modal-label"
-                    aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="section-order-modal-label">
-                          Оставить заявку
-                        </h5>
-                        <button
-                            type="button"
-                            class="btn-close"
-                            data-mdb-dismiss="modal"
-                            aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-
-                          <div class="form-outline mb-4">
-                            <input type="text" id="section-order-form-name" class="form-control" />
-                            <label class="form-label" for="section-order-form-name">
-                              Ваше имя
-                            </label>
-                          </div>
-
-                          <div class="form-outline mb-4">
-                            <input type="email" id="section-order-form-email" class="form-control" />
-                            <label class="form-label" for="section-order-form-email">
-                              Ваш E-mail
-                            </label>
-                          </div>
-
-                          <div class="form-outline mb-4">
-                            <textarea class="form-control" id="section-order-form-message" rows="4"></textarea>
-                            <label class="form-label" for="section-order-form-message">
-                              Ваше сообщение
-                            </label>
-                          </div>
-
-                          <div class="form-check d-flex mb-4 px-0" >
-                            <input
-                                class="form-check-input me-0 mx-0"
-                                type="checkbox"
-                                value=""
-                                id="form4Example4"
-                                style="margin-left: 1rem;width: 16px;height: 16px;"
-                            />
-                            <label class="form-check-label mx-3" for="form4Example4">
-                              С <a href="!#" style="color: #c23a3a;">Политикой конфиденциальности и обработки персональных данных</a> ознакомлен
-                            </label>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn is-btn-close" data-mdb-dismiss="modal">
-                              Отмена
-                            </button>
-                            <button type="submit" class="btn">
-                              Отправить
-                            </button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <? get_template_part( 'template-parts/form', 'order' ); ?>
         </div>
       </section>
       <section id="is-news" class="section is-news">
@@ -662,92 +492,7 @@ get_header();
                   </div>
                 <?php endwhile; ?>
             </div>
-            <div class="row section__order">
-              <div class="col-md-12">
-                <div class="section__order__block" style="background: url(<? echo get_template_directory_uri() . '/assets/img/index_working_order_bg.png'; ?>), #122042;);">
-                  <h4 class="section__order__block__title">
-                    Запросить расчеты
-                  </h4>
-                  <button
-                      type="button"
-                      class="btn section__order__block__btn"
-                      data-mdb-toggle="modal"
-                      data-mdb-target="#section-order-modal"
-                  >
-                    Оставить заявку
-                  </button>
-                  <div
-                      class="modal fade section__order__modal"
-                      id="section-order-modal"
-                      tabindex="-1"
-                      aria-labelledby="section-order-modal-label"
-                      aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="section-order-modal-label">
-                            Оставить заявку
-                          </h5>
-                          <button
-                              type="button"
-                              class="btn-close"
-                              data-mdb-dismiss="modal"
-                              aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <form>
-
-                            <div class="form-outline mb-4">
-                              <input type="text" id="section-order-form-name" class="form-control" />
-                              <label class="form-label" for="section-order-form-name">
-                                Ваше имя
-                              </label>
-                            </div>
-
-                            <div class="form-outline mb-4">
-                              <input type="email" id="section-order-form-email" class="form-control" />
-                              <label class="form-label" for="section-order-form-email">
-                                Ваш E-mail
-                              </label>
-                            </div>
-
-                            <div class="form-outline mb-4">
-                              <textarea class="form-control" id="section-order-form-message" rows="4"></textarea>
-                              <label class="form-label" for="section-order-form-message">
-                                Ваше сообщение
-                              </label>
-                            </div>
-
-                            <div class="form-check d-flex mb-4 px-0" >
-                              <input
-                                  class="form-check-input me-0 mx-0"
-                                  type="checkbox"
-                                  value=""
-                                  id="form4Example4"
-                                  style="margin-left: 1rem;width: 16px;height: 16px;"
-                              />
-                              <label class="form-check-label mx-3" for="form4Example4">
-                                С <a href="!#" style="color: #c23a3a;">Политикой конфиденциальности и обработки персональных данных</a> ознакомлен
-                              </label>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn is-btn-close" data-mdb-dismiss="modal">
-                                Отмена
-                              </button>
-                              <button type="submit" class="btn">
-                                Отправить
-                              </button>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <? get_template_part( 'template-parts/form', 'order' ); ?>
           </div>
           <img src="<? echo get_template_directory_uri() . '/assets/img/index_working_right_round_bg.svg'; ?>" alt="ГородОк" class="is-records__round-right">
         </div>
@@ -800,7 +545,11 @@ get_header();
                   <h3 class="is-work__banner-title">
                     Готовый заказ
                   </h3>
-                  <a href="!#" class="is-work__banner-btn">
+                  <a
+                      class="is-work__banner-btn"
+                      data-mdb-toggle="modal"
+                      data-mdb-target="#section-order-modal"
+                  >
                     Оставить заявку
                   </a>
                 </div>
@@ -1012,6 +761,11 @@ get_header();
             <h2 class="is-contacts__title">
               Наши контакты
             </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <? the_content(); ?>
           </div>
         </div>
         <div class="row is-contacts__form" style="background: url('<? echo get_template_directory_uri() . '/assets/img/contacts_form_bg.jpg'; ?>');">
