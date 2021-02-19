@@ -1321,6 +1321,8 @@
               color: $gorodokDarkBlue;
               text-transform: uppercase;
               font-weight: 500;
+              word-break: break-all;
+              overflow: hidden;
               &:hover {
                 color: #fff;
                 transition: all .5s;
@@ -1543,6 +1545,16 @@
       }
       &__content {
         color: $gorodokDarkBlue;
+      }
+      &__portfolio {
+        &-card {
+          min-height: 300px;
+          background-position: center !important;
+          -webkit-background-size: cover !important;
+          background-size: cover !important;
+          background-repeat: no-repeat !important;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -2168,11 +2180,17 @@
             }
           }
           .form-label {
-            top: .65rem;
+            top: -2rem;
             display: flex;
             align-items: center;
+            position: absolute;
+            left: .5rem;
+            color: #ffffff;
             svg {
               margin-right: .5rem;
+              path {
+                fill: #fff;
+              }
             }
           }
         }

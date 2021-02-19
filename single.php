@@ -276,33 +276,32 @@ get_header();
             <div class="is-category-products__line-bold"></div>
             <div class="is-category-products__line-thin"></div>
         </section>
-
-      <div
-          class="modal fade section__order__modal"
-          id="section-order-modal"
-          tabindex="-1"
-          aria-labelledby="section-order-modal-label"
-          aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="section-order-modal-label">
-                Оставить заявку
-              </h5>
-              <button
-                  type="button"
-                  class="btn-close"
-                  data-mdb-dismiss="modal"
-                  aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-                <? echo do_shortcode( '[contact-form-7 id="78" title="Запросить расчеты"]' ); ?>
+        <div
+            class="modal fade section__order__modal"
+            id="section-order-modal"
+            tabindex="-1"
+            aria-labelledby="section-order-modal-label"
+            aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="section-order-modal-label">
+                  Оставить заявку
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-mdb-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                  <? echo do_shortcode( '[contact-form-7 id="78" title="Запросить расчеты"]' ); ?>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     <? }
     elseif ($queried_post_type == 'news') { ?>
         <section id="is-theader" class="section is-theader container" style="padding-bottom: 1rem;">
@@ -381,12 +380,21 @@ get_header();
                         </div>
                     </div>
                 </div>
-              <div class="row mt-5">
+              <div class="row mt-5 is-news-single__portfolio">
                 <div class="col-lg-12">
                   <h2 class="is-news-single__title">
                       Галерея
                   </h2>
                 </div>
+                  <?php
+                  $images = get_field('portfolio_item_gallery');
+                  if( $images ): ?>
+                      <?php foreach( $images as $image ): ?>
+                      <div class="col-lg-3 mt-3">
+                        <div data-fancybox="gallery" href="<?php echo esc_url($image['url']); ?>" class="is-news-single__portfolio-card" style="background: url('<?php echo esc_url($image['url']); ?>');"></div>
+                      </div>
+                      <?php endforeach; ?>
+                  <?php endif; ?>
               </div>
             </div>
         </section>
