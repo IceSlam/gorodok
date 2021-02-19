@@ -74,17 +74,6 @@ if ( ! function_exists( 'gorodok_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'gorodok_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -119,29 +108,12 @@ function gorodok_content_width() {
 }
 add_action( 'after_setup_theme', 'gorodok_content_width', 0 );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function gorodok_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'gorodok' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'gorodok' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'gorodok_widgets_init' );
+/*
+=================================================================================
+-------------- Стили и скрипты (Styles and scripts) -----------------------------
+=================================================================================
+*/
 
-/**
- * Enqueue scripts and styles.
- */
 function gorodok_scripts() {
     wp_enqueue_style( 'gorodok-style', get_stylesheet_uri(), array(), _S_VERSION );
     wp_enqueue_style( 'Roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', array(), _S_VERSION );
@@ -198,7 +170,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/* Custom logo in adminbar */
+/*
+=================================================================================
+-------------- Логотип в админбаре (Custom adminbar logo) -----------------------
+=================================================================================
+*/
 
 function gorodok_custom_logo() {
     echo '
@@ -221,7 +197,11 @@ function gorodok_custom_logo() {
 }
 add_action('wp_before_admin_bar_render', 'gorodok_custom_logo');
 
-/* Custom theme author in admin panel footer */
+/*
+=================================================================================
+---------- Автор темы в подвале админки (Theme author in admin footer -----------
+=================================================================================
+*/
 
 function remove_footer_admin () {
     echo '<p>Тема ';
@@ -232,7 +212,7 @@ add_filter('admin_footer_text', 'remove_footer_admin');
 
 /*
 =================================================================================
--------------- Страница пареметров темы -----------------------------------------
+-------------- Страница пареметров темы (Custome theme params) ------------------
 =================================================================================
 */
 
@@ -252,7 +232,7 @@ add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
 
 /*
 =================================================================================
--------------- Bootstrap Навигация ----------------------------------------------
+-------------- Bootstrap Навигация (Bootstrap Navigation) -----------------------
 =================================================================================
 */
 
@@ -263,7 +243,6 @@ if ( ! file_exists( get_template_directory() . '/class-bnavwalker.php' ) ) {
     // File exists... require it.
     require_once get_template_directory() . '/class-bnavwalker.php';
 }
-
 
 /*
 =================================================================================
@@ -582,15 +561,42 @@ function gorodok_tax_services() {
 }
 add_action( 'init', 'gorodok_tax_services' );
 
-//add_action('admin_menu', 'remove_admin_menu');
-//function remove_admin_menu() {
-//    remove_menu_page('edit.php');
-//    remove_menu_page('tools.php');
-//    remove_menu_page('edit-comments.php');
-//    remove_menu_page('themes.php');
-//    remove_menu_page('plugins.php');
-//    remove_menu_page('users.php');
-//    remove_menu_page( 'options-general.php');
-//    remove_menu_page( 'duplicator' );
-//    remove_menu_page( 'edit.php?post_type=acf-field-group' );
-//}
+/*
+=================================================================================
+------------------ Удаление разделов из меню админки ----------------------------
+-------------------- Removing links from admin menu -----------------------------
+=================================================================================
+*/
+
+add_action('admin_menu', 'remove_admin_menu');
+function remove_admin_menu() {
+    remove_menu_page('edit.php');
+    remove_menu_page('tools.php');
+    remove_menu_page('edit-comments.php');
+    remove_menu_page('themes.php');
+    remove_menu_page('plugins.php');
+    remove_menu_page('users.php');
+    remove_menu_page( 'options-general.php');
+    remove_menu_page( 'duplicator' );
+    remove_menu_page( 'edit.php?post_type=acf-field-group' );
+}
+
+/*
+=================================================================================
+----------------------- Удаление Frontend-админбара -----------------------------
+----------------------- Removing Frontend-adminbar ------------------------------
+=================================================================================
+*/
+
+add_filter('show_admin_bar', '__return_false');
+
+/*
+=================================================================================
+--------------------- Форматирование вывода аннотации ---------------------------
+-------------------------- Formatting the excerpt -------------------------------
+=================================================================================
+*/
+
+add_filter('excerpt_more', function($more) {
+    return '...';
+});
