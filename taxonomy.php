@@ -35,7 +35,7 @@ get_header();
             </h2>
           </div>
         </div>
-        <div class="row is-catlist__cards" >
+        <div class="row is-catlist__cards d-flex justify-content-center" >
             <?
             $termID = get_queried_object_id();
             $args = array(
@@ -56,7 +56,7 @@ get_header();
             if ( $query->have_posts() ) {
                 while ( $query->have_posts() ) {
                     $query->the_post(); ?>
-                  <div class="col-lg-4 is-category-products__card-portfolio__cards-card">
+                  <div class="col-md-6 col-lg-4 is-category-products__card-portfolio__cards-card">
                     <div class="is-category-products__card-portfolio__cards-card__inner">
                       <div class="is-category-products__card-portfolio__cards-card__inner-img" style="background: url('<?php the_post_thumbnail_url(); ?>');"></div>
                       <a href="<? the_permalink(); ?>" class="is-category-products__card-portfolio__cards-card__inner-title d-block">

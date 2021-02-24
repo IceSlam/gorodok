@@ -229,7 +229,7 @@ get_header();
                                         Портфолио работ
                                     </h4>
                                 </div>
-                                <div class="row is-category-products__card-portfolio__cards">
+                                <div class="row is-category-products__card-portfolio__cards d-flex justify-content-center">
                                     <?php
 
                                     $post_objects = get_field('portfolio');
@@ -237,7 +237,7 @@ get_header();
                                     if( $post_objects ): ?>
                                         <?php foreach( $post_objects as $post): // Переменная должна быть названа обязательно $post (IMPORTANT) ?>
                                             <?php setup_postdata($post); ?>
-                                            <div class="col-lg-4 is-category-products__card-portfolio__cards-card">
+                                            <div class="col-md-6 col-lg-4 is-category-products__card-portfolio__cards-card">
                                                 <div class="is-category-products__card-portfolio__cards-card__inner">
                                                     <div class="is-category-products__card-portfolio__cards-card__inner-img" style="background: url('<?php the_post_thumbnail_url(); ?>');"></div>
                                                     <a href="<? the_permalink(); ?>" class="is-category-products__card-portfolio__cards-card__inner-title d-block">
