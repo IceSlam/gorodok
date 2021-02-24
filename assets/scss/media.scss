@@ -732,6 +732,11 @@
         .navbar-nav {
           li {
             text-align: center;
+            &.active {
+              .nav-link {
+                color: #ffffff;
+              }
+            }
           }
         }
       }
@@ -794,7 +799,11 @@
       &__order {
         margin-top: 2.5rem;
         &__block {
+          margin-bottom: .5rem;
+          border-radius: 10px;
           display: block;
+          -webkit-background-size: cover !important;
+          background-size: cover !important;
           &:before {
             display: none;
           }
@@ -804,7 +813,8 @@
             margin-bottom: 1rem;
           }
           &__btn {
-            width: 100%;
+            display: block;
+            margin: 0 auto;
           }
         }
       }
@@ -1084,9 +1094,135 @@
         }
       }
     }
+    &:not(.home) {
+      .is-main {
+        .is-theader {
+          padding-top: 1rem;
+        }
+        .is-records {
+          padding-top: .5rem;
+          &__cards {
+            padding-bottom: 2rem;
+            justify-content: center;
+            &-circle {
+              max-width: none;
+              height: auto;
+              padding: 3rem;
+              &__title {
+                text-align: center;
+              }
+              &__wrapper {
+                order: 1;
+                margin-top: 0;
+                margin-bottom: 2rem;
+                max-width: 450px;
+              }
+              &__inner {
+                max-width: 300px;
+                height: 300px;
+              }
+            }
+            &-square {
+              &__caption {
+                font-size: 2.5rem;
+                text-align: left;
+                .capt {
+                  font-size: 2.5rem;
+                }
+              }
+              &__wrapper {
+                margin-top: 1rem;
+                &-caption {
+                  margin-left: 0 !important;
+                  margin-right: 0 !important;
+                  text-align: left;
+                }
+                &:nth-child(1) {
+                  order: 2;
+                }
+                &:nth-child(2) {
+                  order: 2;
+                }
+                &:nth-child(3) {
+                  order: 3;
+                }
+                &:nth-child(5) {
+                  order: 5;
+                }
+                &:nth-child(4) {
+                  order: 4;
+                }
+              }
+            }
+          }
+          &__round-right {
+            display: none;
+          }
+        }
+        .is-work {
+          &__cards {
+            &-card {
+              &:first-child {
+                border-bottom: none !important;
+                padding-bottom: 3rem;
+              }
+              &:nth-child(3) {
+                padding-bottom: 3rem;
+              }
+              &:nth-child(4) {
+                order: 4;
+              }
+              &:nth-child(5) {
+                padding-bottom: 3rem;
+                border-bottom: none;
+              }
+              &:nth-child(6) {
+                order: 6;
+              }
+            }
+          }
+          &__banner {
+            padding: 1rem;
+            &-title {
+              font-size: 2rem;
+              text-align: center;
+              line-height: 2rem;
+              margin-bottom: 1rem;
+            }
+            &-wrapper {
+              padding: 3rem 1.5rem;
+              z-index: 40;
+              .d-block {
+                width: 100%;
+              }
+            }
+            &-btn {
+              display: block;
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+        .is-contacts {
+          padding: 1.5rem 1rem 10rem;
+          .wpcf7-form {
+            .col-lg-4 {
+              margin-top: 3rem;
+            }
+            .form-check {
+              display: flex;
+            }
+          }
+          .wpcf7-submit {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
   }
 
-  .category {
+  .category,
+  .archive {
     .is-header {
       .is-navbar {
         background: rgba(43,49,65,1);
@@ -1105,6 +1241,11 @@
   }
 
   .single {
+    .is-main {
+      .is-theader {
+        padding-top: 1rem;
+      }
+    }
     .is-category {
       &-title {
         padding: 2rem 0rem 5rem !important;
@@ -1143,6 +1284,17 @@
         }
         &__line-thin {
           display: none;
+        }
+      }
+    }
+    &-portfolio {
+      .is-main {
+        .is-news {
+          &-single {
+            &__title {
+              margin-top: 1rem;
+            }
+          }
         }
       }
     }
