@@ -116,7 +116,7 @@
   <div class="is-footer__copyright">
     <div class="container">
       <p>
-        &copy; 2018 - <?php echo date("Y");?> «ГородОК». Все права защищены.
+        &copy; 2018 - <?php echo date("Y");?> «Город'ОК». Все права защищены.
       </p>
       <a href="https://alianscompany.ru" target="_blank">
         Сайт разработан
@@ -125,7 +125,9 @@
     </div>
   </div>
 </footer>
-
+<a class="back_to_top" href="#is-header" uk-scroll>
+  <i class="fas fa-chevron-up"></i>
+</a>
 <?php wp_footer(); ?>
 
 </body>

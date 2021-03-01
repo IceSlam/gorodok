@@ -116,15 +116,8 @@ add_action( 'after_setup_theme', 'gorodok_content_width', 0 );
 
 function gorodok_scripts() {
     wp_enqueue_style( 'gorodok-style', get_stylesheet_uri(), array(), _S_VERSION );
-    wp_enqueue_style( 'Roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', array(), _S_VERSION );
-    wp_enqueue_style( 'FontAwesome-icons', get_template_directory_uri() . '/assets/css/all.min.css', array(), 5.15 );
-    wp_enqueue_style( 'Bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), 5.0 );
-    wp_enqueue_style( 'MDBootstrap-css', get_template_directory_uri() . '/assets/css/mdb.min.css', array(), 5.0 );
-    wp_enqueue_style( 'UIKit-css', get_template_directory_uri() . '/assets/css/uikit.min.css', array(), 3.16 );
-    wp_enqueue_style( 'FancyBox-css', get_template_directory_uri() . '/assets/css/jquery.fancybox.min.css', array(), 3.5 );
-    wp_enqueue_style( 'Main-css', get_template_directory_uri() . '/assets/css/main.min.css', array(), _S_VERSION );
-    wp_enqueue_style( 'Media-css', get_template_directory_uri() . '/assets/css/media.min.css', array(), _S_VERSION );
-    wp_style_add_data( 'remember-style', 'rtl', 'replace' );
+    wp_enqueue_style( 'GorodOK-app', get_template_directory_uri() . '/assets/css/app.bundle.min.css', array(), _S_VERSION );
+    wp_style_add_data( 'gorodok-style', 'rtl', 'replace' );
 
     wp_enqueue_script( 'gorodok-navigation', get_template_directory_uri() . '/js/navigation.min.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'JQuery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), 3.5, true );
@@ -134,7 +127,6 @@ function gorodok_scripts() {
     wp_enqueue_script( 'UIKit', get_template_directory_uri() . '/assets/js/uikit.min.js', array(), 3.16, true );
     wp_enqueue_script( 'UIKit-icons', get_template_directory_uri() . '/assets/js/juikit-icons.min.js', array(), 3.16, true );
     wp_enqueue_script( 'GorodOK-app', get_template_directory_uri() . '/assets/js/app.min.js', array(), _S_VERSION, true );
-    wp_enqueue_script( 'GorodOK-navScroll', get_template_directory_uri() . '/assets/js/navscroll.min.js', array(), 3.5, true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

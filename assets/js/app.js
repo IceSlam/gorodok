@@ -39,9 +39,64 @@ $('.is-reviews__slider-slide__more').click(function(eventObject){
     $(this).toggleClass('rotate');
     $(this).parent().find('.is-reviews__slider-slide__review').toggleClass('show');
     if ($(this).parent().find('.is-reviews__slider-slide__review').hasClass('show')) {
-        $(this).html('Скрыть <img src="https://14.al-dev.ru/wp-content/themes/gorodok/assets/img/about_page_reviews_more.svg" alt="Скрыть">');
+        $(this).html('Скрыть <img src="https://gorodok17.ru/wp-content/themes/gorodok/assets/img/about_page_reviews_more.svg" alt="Скрыть">');
     } else {
-        $(this).html('Подробнее <img src="https://14.al-dev.ru/wp-content/themes/gorodok/assets/img/about_page_reviews_more.svg" alt="Больше">');
+        $(this).html('Подробнее <img src="https://gorodok17.ru/wp-content/themes/gorodok/assets/img/about_page_reviews_more.svg" alt="Больше">');
     }
     return false;
 });
+
+(function() {
+    'use strict';
+
+    var goTopBtn = document.querySelector('.is-navbar');
+    function trackScroll() {
+        let scrolled = window.pageYOffset;
+        let coords = document.documentElement.clientHeight;
+
+        if (scrolled > coords) {
+            goTopBtn.classList.add('thin');
+        }
+        if (scrolled < coords) {
+            goTopBtn.classList.remove('thin');
+        }
+    }
+
+    function backToTop() {
+        if (window.pageYOffset > 30) {
+            window.scrollBy(0, -40);
+            setTimeout(backToTop, 0);
+        }
+    }
+    window.addEventListener('scroll', trackScroll);
+})();
+
+showMenu = () => {
+    document.getElementById('is-navbar-mobile').classList.toggle("show")
+}
+
+(function() {
+    'use strict';
+
+    var scrollTopBtn = document.querySelector('.back_to_top');
+    function topScroll() {
+        let scrolled = window.pageYOffset;
+        let coords = document.documentElement.clientHeight;
+
+        if (scrolled > coords) {
+            scrollTopBtn.classList.add('show');
+        }
+        if (scrolled < coords) {
+            scrollTopBtn.classList.remove('show');
+        }
+    }
+
+    function scrollToTop() {
+        if (window.pageYOffset > 30) {
+            window.scrollBy(0, -40);
+            setTimeout(scrollToTop, 0);
+        }
+    }
+    window.addEventListener('scroll', topScroll);
+})();
+

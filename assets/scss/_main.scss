@@ -9,6 +9,10 @@
   text-decoration: none !important;
 }
 
+body {
+  position: relative;
+}
+
 .tab-content > .active {
   display: inherit !important;
 }
@@ -23,6 +27,29 @@
 
 .form-check-input:focus {
   background-color: $gorodokRed;
+}
+
+.back_to_top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 48px;
+  height: 48px;
+  background: $gorodokRed;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  opacity: 0;
+  transition: all .5s;
+  z-index: 2000;
+  &:hover {
+    color: #ffffff !important;
+  }
+  &.show {
+    opacity: 1;
+  }
 }
 
 .is-header {
@@ -1311,6 +1338,7 @@
           li {
             &:first-child {
               a {
+                white-space: normal;
                 -webkit-border-radius: 0 !important;
                 -moz-border-radius: 0 !important;
                 border-radius: 0 !important;
