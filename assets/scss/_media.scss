@@ -613,6 +613,9 @@
                   margin-bottom: 0;
                 }
               }
+              &-body {
+                max-height: 400px !important;
+              }
             }
           }
         }
@@ -1279,6 +1282,9 @@
                 &__title {
                   margin-bottom: 0;
                 }
+              }
+              &-body {
+                max-height: 400px !important;
               }
             }
           }

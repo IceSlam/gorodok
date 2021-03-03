@@ -48600,7 +48600,7 @@ body.compensate-for-scrollbar {
 * {
 		padding: 0;
 		margin: 0;
-		font-family: Roboto, "Font Awesome 5 Free", sans-serif !important;
+		font-family: Roboto, "Font Awesome 5 Free", "Font Awesome 5 Brands", sans-serif !important;
 		text-decoration: none !important;
 }
 
@@ -48836,6 +48836,28 @@ body {
 		font-size: 0.75rem;
 		margin-left: 1.5rem;
 		display: block;
+}
+.is-footer__contacts-wrapper__content-item.messenger {
+		display: flex;
+}
+.is-footer__contacts-wrapper__content-item.messenger .btn {
+		box-shadow: none;
+		padding: 0.5rem;
+		margin: 0.5rem 0.5rem;
+		font-size: 1rem;
+		color: #ffffff;
+		border-radius: 100%;
+		border: 2px solid #fff;
+		width: 36px;
+		height: 36px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+.is-footer__contacts-wrapper__content-item.messenger .btn:hover {
+		background: #ffffff;
+		color: #c23a3a;
+		border: 2px solid #c23a3a;
 }
 .is-footer__contacts-wrapper__content:after {
 		content: "";
@@ -51883,6 +51905,10 @@ body {
 .archive .is-main .is-catlist__cards-card__wrapper-header__title {
 				margin-bottom: 0;
 		}
+		.category .is-main .is-catlist__cards-card__wrapper-body,
+.archive .is-main .is-catlist__cards-card__wrapper-body {
+				max-height: 400px !important;
+		}
 
 		.single .is-header .is-navbar {
 				padding: 0.5rem 0;
@@ -52435,6 +52461,10 @@ body {
 		.category .is-main .is-catlist__cards-card__wrapper-header__title,
 .archive .is-main .is-catlist__cards-card__wrapper-header__title {
 				margin-bottom: 0;
+		}
+		.category .is-main .is-catlist__cards-card__wrapper-body,
+.archive .is-main .is-catlist__cards-card__wrapper-body {
+				max-height: 400px !important;
 		}
 
 		.single .is-main .is-theader {

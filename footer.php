@@ -100,7 +100,7 @@
           </div>
           <div class="is-footer__contacts-wrapper__content-item">
             <p class="title">
-              <img src="../img/phone.svg" alt="">
+              <img src="<? echo get_template_directory_uri() . '/assets/img/phone.svg'; ?>" alt="">
               Наши телефоны
             </p>
               <?php while ( have_rows('system_phones', 'option') ) : the_row(); ?>
@@ -108,6 +108,41 @@
                     <? the_sub_field('phone', 'option'); ?>
                 </a>
               <?php endwhile; ?>
+          </div>
+          <div class="is-footer__contacts-wrapper__content-item messenger mt-4">
+            <?
+              $wa =  get_field('system_whatsapp', 'option');
+              if ($wa) {?>
+                <a
+                    href="https://wa.me/<? the_field('system_whatsapp', 'option'); ?>"
+                    class="btn"
+                    target="_blank"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+             <? } ?>
+              <?
+              $viber =  get_field('system_viber', 'option');
+              if ($viber) { ?>
+                <a
+                    href="https://viber.click/<? the_field('system_viber', 'option'); ?>"
+                    class="btn"
+                    target="_blank"
+                >
+                  <i class="fab fa-viber"></i>
+                </a>
+              <? } ?>
+              <?
+              $telegram =  get_field('system_telegram', 'option');
+              if ($telegram) { ?>
+                <a
+                    href="https://t.me/<? the_field('system_telegram', 'option'); ?>"
+                    class="btn"
+                    target="_blank"
+                >
+                  <i class="fab fa-telegram-plane"></i>
+                </a>
+              <? } ?>
           </div>
         </div>
       </div>

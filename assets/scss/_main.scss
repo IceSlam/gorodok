@@ -5,7 +5,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: Roboto, 'Font Awesome 5 Free', sans-serif !important;
+  font-family: Roboto, 'Font Awesome 5 Free', 'Font Awesome 5 Brands', sans-serif !important;
   text-decoration: none !important;
 }
 
@@ -252,6 +252,32 @@ body {
           font-size: .75rem;
           margin-left: 1.5rem;
           display: block;
+        }
+        &.messenger {
+          display: flex;
+          .btn {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            padding: .5rem;
+            margin: .5rem .5rem;
+            font-size: 1rem;
+            color: #ffffff;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            border: 2px solid #fff;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+              background: #ffffff;
+              color: $gorodokRed;
+              border: 2px solid $gorodokRed;
+            }
+          }
         }
       }
       &:after {
