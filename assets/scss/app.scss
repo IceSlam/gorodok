@@ -1,3 +1,7 @@
+//////////////////////////////////////////////////////
+//////////// === Main theme SCSS file === ////////////
+//////////////////////////////////////////////////////
+
 /* Fonts */
 
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap";
@@ -13,5 +17,5 @@
 
 /* Theme styles */
 
-@import "main";
-@import "media";
+@import "main"; // Main theme styles
+@import "media"; // Theme media queries
