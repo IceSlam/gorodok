@@ -592,3 +592,12 @@ add_filter('show_admin_bar', '__return_false');
 add_filter('excerpt_more', function($more) {
     return '...';
 });
+
+function my_login_logo(){
+    echo '
+   <style type="text/css">
+        #login h1 a { background: url('. get_template_directory_uri().'/assets/img/navbar_logo.svg) no-repeat 0 0 !important; -webkit-background-size: cover !important;background-size: cover !important;height: 128px;width: auto;background-position: center !important; }
+    </style>';
+}
+add_action('login_head', 'my_login_logo');
+
