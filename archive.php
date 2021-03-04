@@ -31,7 +31,7 @@ get_header();
         <div class="row">
           <div class="col-lg-12">
             <h2 class="is-catlist__title">
-              Каталог
+              Услуги
             </h2>
           </div>
         </div>

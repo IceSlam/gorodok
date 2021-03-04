@@ -22,16 +22,20 @@ get_header();
   <?php
     if ($thePageId == 32) { ?>
       <section id="is-slider" class="section is-slider">
-        <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push; min-height: 300; max-height: 742; autoplay: true;">
+        <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push; min-height: 300; max-height: 742; autoplay: true;finite: false">
 
           <ul class="uk-slideshow-items">
               <?php while ( have_rows('index_slides') ) : the_row(); ?>
                 <li style="background: url(<? the_sub_field('img'); ?>);">
                   <!--                  <img src="--><?// the_sub_field('img'); ?><!--" alt="Фон слайда">-->
                   <div class="uk-position-center uk-position-small uk-text-center uk-light">
-                    <h2 class="uk-margin-remove">
-                        <? the_sub_field('title'); ?>
-                    </h2>
+                    <?
+                    $slideTitle = get_sub_field('title');
+                    if ($slideTitle) { ?>
+                      <h2 class="uk-margin-remove">
+                          <? the_sub_field('title'); ?>
+                      </h2>
+                      <? } ?>
                       <?
                       $slideSubtitle = get_sub_field('subtitle');
                       if ($slideSubtitle) { ?>
@@ -94,7 +98,7 @@ get_header();
       <section id="is-working" class="section is-working":>
         <div class="container">
           <h2>
-            Мы работаем для Вас!
+            Наши услуги
           </h2>
           <div class="row is-working__cards">
             <div class="col-md-6 col-lg-4 mt-3">
