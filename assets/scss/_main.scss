@@ -501,10 +501,10 @@ body {
     overflow: hidden;
     .uk-slideshow-items {
       li {
-        background-repeat: no-repeat;
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center;
+        background-repeat: no-repeat !important;
+        -webkit-background-size: cover !important;
+        background-size: cover !important;
+        background-position: center !important;
         min-height: 750px;
         h2 {
           font-size: 3.4375rem;

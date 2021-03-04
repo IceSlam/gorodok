@@ -49034,9 +49034,9 @@ body {
 		overflow: hidden;
 }
 .is-main .is-slider .uk-slideshow-items li {
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: center !important;
 		min-height: 750px;
 }
 .is-main .is-slider .uk-slideshow-items li h2 {
