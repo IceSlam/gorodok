@@ -1,6 +1,6 @@
 <div class="row section__order">
     <div class="col-md-12">
-        <div class="section__order__block" style="background: url(<? echo get_template_directory_uri() . '/assets/img/index_working_order_bg.png'; ?>), #122042;);">
+        <div class="section__order__block" style="background: url(<? echo get_template_directory_uri() . '/assets/img/index_working_order_bg.webp'; ?>), #122042;">
             <h4 class="section__order__block__title">
                 Запросить расчеты
             </h4>

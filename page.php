@@ -58,7 +58,7 @@ get_header();
           <ul class="uk-slideshow-nav uk-dotnav uk-flex-center"></ul>
 
         </div>
-        <img class="is-slider__mouse" src="<? echo get_template_directory_uri() . '/assets/img/index_slider_mouse.png'; ?>" alt="Листайте вниз">
+        <img class="is-slider__mouse" src="<? echo get_template_directory_uri() . '/assets/img/index_slider_mouse.png'; ?>" loading="lazy" alt="Листайте вниз">
         <div class="is-slider__social">
             <? $facebook = get_field('system_facebook', 'option');
             if ($facebook) { ?>
@@ -94,7 +94,7 @@ get_header();
             <? } ?>
         </div>
       </section>
-      <section id="is-working" class="section is-working":>
+      <section id="is-working" class="section is-working">
         <div class="container">
           <h2>
             Наши услуги
@@ -361,11 +361,11 @@ get_header();
 
           </div>
           <? get_template_part( 'template-parts/form', 'order' ); ?>
-          <img src="<? echo get_template_directory_uri() . '/assets/img/index_working_right_round_bg.svg'; ?>" alt="Мы работаем для Вас! " class="is-working__round-right">
+          <img src="<? echo get_template_directory_uri() . '/assets/img/index_working_right_round_bg.svg'; ?>" loading="lazy" alt="Мы работаем для Вас! " class="is-working__round-right">
         </div>
       </section>
       <section id="is-about" class="section is-about">
-        <div class="is-about__wrapper" style="background: url(<? echo get_template_directory_uri() . '/assets/img/index_about_bg.png'; ?>">
+        <div class="is-about__wrapper" style="background: url(<? echo get_template_directory_uri() . '/assets/img/index_about_bg.webp'; ?>">
           <div class="container">
             <div class="row">
               <div class="col-md-6 col-lg-4">
@@ -378,7 +378,7 @@ get_header();
               <div class="col-md-6 col-lg-8">
                 <div class="is-about__wrapper__info-content">
                     <? the_field('index_about_info'); ?>
-                  <a href="<? the_field('index_about_link'); ?>" class="btn is-about__wrapper__info-content__btn">
+                  <a href="<? the_permalink(6); ?>" class="btn is-about__wrapper__info-content__btn">
                     Подробнее
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                       <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
@@ -393,8 +393,9 @@ get_header();
                     <div class="card is-about__wrapper-cards__card">
                       <div class="is-about__wrapper-cards__card-img" style="background: url(<? the_sub_field('photo'); ?>);">
                         <img
-                            src="<? echo get_template_directory_uri() . '/assets/img/index_about_card_img.png'; ?>"
+                            src="<? echo get_template_directory_uri() . '/assets/img/index_about_card_img.webp'; ?>"
                             class="card-img-top"
+                            loading="lazy"
                             alt="..."
                         />
                       </div>
@@ -406,7 +407,7 @@ get_header();
                             <? the_sub_field('description'); ?>
                         </p>
                         <a href="tel:<? the_sub_field('phone'); ?>" class="btn is-about__wrapper-cards__card-btn">
-                          <img src="<? echo get_template_directory_uri() . '/assets/img/index_about_card_phone.svg'; ?>" alt="Телефон сотрудника">
+                          <img src="<? echo get_template_directory_uri() . '/assets/img/index_about_card_phone.svg'; ?>" loading="lazy" alt="Телефон сотрудника">
                             <? the_sub_field('phone'); ?>
                         </a>
                       </div>
@@ -416,7 +417,7 @@ get_header();
             </div>
           </div>
         </div>
-        <img src="<? echo get_template_directory_uri() . '/assets/img/index_about_logo_left.png'; ?>" alt="Город'ОК" class="is-about__logo-left">
+        <img src="<? echo get_template_directory_uri() . '/assets/img/index_about_logo_left.png'; ?>" loading="lazy" alt="Город'ОК" class="is-about__logo-left">
         <div class="is-about__line-bold"></div>
         <div class="is-about__line-thin"></div>
       </section>
@@ -439,7 +440,7 @@ get_header();
                 <?php while ( have_rows('index_trust_slides') ) : the_row(); ?>
                   <li class="is-trust__wrapper-slider__slides-slide">
                     <div class="uk-panel">
-                      <img src="<? the_sub_field('logo'); ?>" alt="<? the_sub_field('company'); ?>">
+                      <img src="<? the_sub_field('logo'); ?>" loading="lazy" alt="<? the_sub_field('company'); ?>">
                     </div>
                   </li>
                 <?php endwhile; ?>
@@ -479,8 +480,9 @@ get_header();
                       <div class="is-news__cards-wrapper__card card">
                         <div class="is-news__cards-wrapper__card-header" style="background: url('<?php the_post_thumbnail_url(); ?>');">
                           <img
-                              src="<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>"
+                              src="<? echo get_template_directory_uri() . '/assets/img/index_news_item1.webp'; ?>"
                               class="card-img-top is-news__cards-wrapper__card-header__img img-fluid"
+                              loading="lazy"
                               alt="<? the_title(); ?>"
                           />
                           <div class="is-news__cards-wrapper__card-header__badge">
@@ -493,7 +495,7 @@ get_header();
                           </h5>
                           <a href="<? the_permalink(); ?>" class="btn is-news__cards-wrapper__card-body__btn">
                             Подробнее
-                            <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" alt="Подробнее">
+                            <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" loading="lazy" alt="Подробнее">
                           </a>
                         </div>
                       </div>
@@ -567,7 +569,7 @@ get_header();
                   <? the_field('about_company_video_description'); ?>
               </p>
             </div>
-            <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_block_logo.png'; ?>" alt="Город'ОК" class="is-about__content-bgi">
+            <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_block_logo.png'; ?>" loading="lazy" alt="Город'ОК" class="is-about__content-bgi">
           </div>
         </section>
       </div>
@@ -632,7 +634,7 @@ get_header();
             </div>
               <? get_template_part( 'template-parts/form', 'order' ); ?>
           </div>
-          <img src="<? echo get_template_directory_uri() . '/assets/img/index_working_right_round_bg.svg'; ?>" alt="ГородОк" class="is-records__round-right">
+          <img src="<? echo get_template_directory_uri() . '/assets/img/index_working_right_round_bg.svg'; ?>" loading="lazy" alt="ГородОк" class="is-records__round-right">
         </div>
         <div class="is-records__line-bold"></div>
         <div class="is-records__line-thin"></div>
@@ -654,7 +656,7 @@ get_header();
                   ?>
                 <div class="col-md-6 col-lg-4 is-work__cards-card">
                   <div class="is-work__cards-card__content">
-                    <img src="<? the_sub_field('img'); ?>" alt="Обращение в компанию" class="is-work__cards-card__content-img">
+                    <img src="<? the_sub_field('img'); ?>" loading="lazy" alt="Обращение в компанию" class="is-work__cards-card__content-img">
                     <h5 class="is-work__cards-card__content-title">
                         <span>
                           <? echo $stepCount ?>
@@ -662,7 +664,7 @@ get_header();
                         <? the_sub_field('title'); ?>
                     </h5>
                     <div class="is-work__cards-card__content-badge">
-                      <img src="<? the_sub_field('icon'); ?>" alt="<? the_sub_field('title'); ?>">
+                      <img src="<? the_sub_field('icon'); ?>" loading="lazy" alt="<? the_sub_field('title'); ?>">
                     </div>
                   </div>
                 </div>
@@ -696,7 +698,7 @@ get_header();
           </div>
         </div>
         <div class="is-work__line-bold"></div>
-        <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_work_logo.png'; ?>" alt="Город'ОК'" class="is-work__logo-bg">
+        <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_work_logo.png'; ?>" loading="lazy" alt="Город'ОК'" class="is-work__logo-bg">
       </section>
       <section id="is-reviews" class="section is-reviews">
         <div class="container">
@@ -735,9 +737,9 @@ get_header();
                           </div>
                           <a href="!#" class="is-reviews__slider-slide__more">
                             Подробнее
-                            <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_more.svg'; ?>" alt="Больше">
+                            <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_more.svg'; ?>" loading="lazy" alt="Больше">
                           </a>
-                          <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_quote.svg'; ?>" alt="Цитата" class="is-reviews__slider-slide__quote">
+                          <img src="<? echo get_template_directory_uri() . '/assets/img/about_page_reviews_quote.svg'; ?>" loading="lazy" alt="Цитата" class="is-reviews__slider-slide__quote">
                           <div class="is-reviews__slider-slide__badge">
                             <? the_sub_field('date'); ?>
                           </div>
@@ -802,14 +804,14 @@ get_header();
                 </p>
                   <?php while ( have_rows('system_phones', 'option') ) : the_row(); ?>
                     <a href="tel:<? the_sub_field('phone', 'option'); ?>" class="is-contacts__map-info__item-link">
-                      <img src="<? echo get_template_directory_uri() . '/assets/img/phone.svg'; ?>" alt="<? the_sub_field('phone', 'option'); ?>">
+                      <img src="<? echo get_template_directory_uri() . '/assets/img/phone.svg'; ?>" loading="lazy" alt="<? the_sub_field('phone', 'option'); ?>">
                         <? the_sub_field('phone', 'option'); ?>
                     </a>
                   <?php endwhile; ?>
               </div>
               <div class="is-contacts__map-info__item">
                 <p class="is-contacts__map-info__item-title address">
-                  <img src="<? echo get_template_directory_uri() . '/assets/img/map.svg'; ?>" alt="">
+                  <img src="<? echo get_template_directory_uri() . '/assets/img/map.svg'; ?>" loading="lazy" alt="">
                   <span>
                     Адрес
                   </span>
@@ -865,6 +867,7 @@ get_header();
                           <img
                               src="<? echo get_template_directory_uri() . '/assets/img/index_news_item1.jpg'; ?>"
                               class="card-img-top is-news__cards-wrapper__card-header__img img-fluid"
+                              loading="lazy"
                               alt="<? the_title(); ?>"
                           />
                           <div class="is-news__cards-wrapper__card-header__badge">
@@ -877,7 +880,7 @@ get_header();
                           </h5>
                           <a href="<? the_permalink(); ?>" class="btn is-news__cards-wrapper__card-body__btn">
                             Подробнее
-                            <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" alt="Подробнее">
+                            <img src="<? echo get_template_directory_uri() . '/assets/img/index_news_btn_more.svg'; ?>" loading="lazy" alt="Подробнее">
                           </a>
                         </div>
                       </div>

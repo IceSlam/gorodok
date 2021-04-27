@@ -206,47 +206,53 @@ get_header();
               aria-labelledby="ex1-tab-1"
           >
               <?
-              $args = array(
-                  'post_type'      => 'catalog',
-                  'post_status'    => 'publish',
-                  'posts_per_page' => - 1,
-              );
+              $categories = get_categories( [
+                  'taxonomy'     => 'services',
+                  'type'         => 'catalog',
+                  'child_of'     => 0,
+                  'parent'       => '',
+                  'orderby'      => 'name',
+                  'order'        => 'ASC',
+                  'hide_empty'   => 0,
+                  'hierarchical' => 1,
+                  'exclude'      => '',
+                  'include'      => '',
+                  'number'       => 0,
+                  'pad_counts'   => false,
+                  // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+              ] );
 
-              $query = new WP_Query( $args );
-
-              if ( $query->have_posts() ) {
-                  while ( $query->have_posts() ) {
-                      $query->the_post(); ?>
-                    <div class="col-md-6 mt-3">
+              if( $categories ){
+                  foreach( $categories as $cat ){?>
+                      <div class="col-md-6 mt-3">
                       <div class="is-catlist__cards-card">
                         <div class="is-catlist__cards-card__wrapper">
                           <div class="is-catlist__cards-card__wrapper-header">
                             <h5 class="is-catlist__cards-card__wrapper-header__title">
-                                <? the_title(); ?>
+                                <? echo $cat->name; ?>
                             </h5>
-                          </div>
-                          <div class="is-catlist__cards-card__wrapper-body" style="background: url('<?php the_post_thumbnail_url(); ?>')">
-                            <div class="mask"></div>
-                            <div class="is-catlist__cards-card__wrapper-body__info">
-                              <p>
-                                  <? the_excerpt(); ?>
-                              </p>
                             </div>
-                          </div>
-                        </div>
-                        <a href="<? the_permalink(); ?>" class="btn is-catlist__cards-card__btn">
-                        <span>
-                          Подробнее
-                        </span>
-                        </a>
-                      </div>
-                    </div>
-                  <?  }
-              } else {
-                  echo '<p class="text-center">Услуг не найдено</p>';
+                            <div class="is-catlist__cards-card__wrapper-body" style="background: url('<?php
+                            if($category_image=get_field("cat_image",get_category($cat))){
+                              echo $category_image;
+                            }?>')">
+                              <div class="mask"></div>
+                              <div class="is-catlist__cards-card__wrapper-body__info">
+                                <p>
+                                    <? echo $cat->description; ?>
+                                </p>
+                              </div>
+                            </div>
+                            </div>
+                            <a href="<? echo get_category_link( $cat->term_id ); ?>" class="btn is-catlist__cards-card__btn">
+                              <span>
+                               Подробнее
+                             </span>
+                            </a>
+                            </div>
+                            </div> <?
+                  }
               }
-
-              wp_reset_postdata();
               ?>
           </div>
           <div

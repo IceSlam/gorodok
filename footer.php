@@ -163,6 +163,13 @@
   <i class="fas fa-chevron-up"></i>
 </a>
 <?php wp_footer(); ?>
+<script src="/wp-content/themes/gorodok/assets/js/jquery.min.js" type="module"></script>
+<script src="/wp-content/themes/gorodok/assets/js/jquery.fancybox.min.js" type="module"></script>
+<script src="/wp-content/themes/gorodok/assets/js/bootstrap.bundle.min.js" type="module"></script>
+<script src="/wp-content/themes/gorodok/assets/js/mdb.min.js" type="module"></script>
+<script src="/wp-content/themes/gorodok/assets/js/uikit.min.js" type="module"></script>
+<script src="/wp-content/themes/gorodok/assets/js/juikit-icons.min.js" type="module"></script>
+<script src="/wp-content/themes/gorodok/assets/js/app.min.js" type="module"></script>
 
 </body>
 </html>

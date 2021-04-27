@@ -16,6 +16,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="expires" content="Sun, 01 Jan 2022 07:01:00 GMT">
 
     <?php wp_head(); ?>
     <link rel="icon" href="<? echo get_template_directory_uri() . '/assets/img/logo.png'; ?>">
@@ -32,6 +33,8 @@
                 src="<? the_field('system_logo_header', 'option'); ?>"
                 alt="Город'ОК"
                 loading="lazy"
+                width="191px"
+                height="106px"
             />
             <span>
               Рекламно-производственная компания
@@ -67,7 +70,7 @@
             <div class="is-navbar__contacts ms-auto d-flex">
               <div class="is-navbar__contacts__item">
                 <p class="title">
-                  <img src="<? echo get_template_directory_uri() . '/assets/img/map.svg'; ?>" alt="Адрес">Адрес
+                  <img src="<? echo get_template_directory_uri() . '/assets/img/map.svg'; ?>" alt="Адрес" width="15px" height="15px">Адрес
                 </p>
                 <a href="<? the_field('system_address_link', 'option'); ?>" class="link" target="_blank">
                     <? the_field('system_address', 'option'); ?>
@@ -75,7 +78,7 @@
               </div>
               <div class="is-navbar__contacts__item">
                 <p class="title">
-                  <img src="<? echo get_template_directory_uri() . '/assets/img/email.svg'; ?>" alt="Email">
+                  <img src="<? echo get_template_directory_uri() . '/assets/img/email.svg'; ?>" alt="Email" width="15px" height="15px">
                   Наша почта
                 </p>
                 <a href="mailto:<? the_field('system_email', 'option'); ?>" class="link">
@@ -84,7 +87,7 @@
               </div>
               <div class="is-navbar__contacts__item">
                 <p class="title">
-                  <img src="<? echo get_template_directory_uri() . '/assets/img/phone.svg'; ?>" alt="Телефон">
+                  <img src="<? echo get_template_directory_uri() . '/assets/img/phone.svg'; ?>" alt="Телефон"  width="15px" height="15px">
                   Наши телефоны
                 </p>
                 <div class="dropdown">

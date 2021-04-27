@@ -347,6 +347,7 @@ body {
         border-radius: 10px 10px 0 0;
         background-repeat: no-repeat !important;
         background-position: left center !important;
+        background: url('/wp-content/themes/gorodok/assets/img/index_working_order_bg.webp'), $gorodokDarkBlue;
         overflow: hidden;
         &::before {
           content: '';
@@ -1801,9 +1802,10 @@ body {
                 bottom: 0;
                 left: 0;
                 background: rgba(18,32,66,.5);
-                transform: translate(-100%, 100%);
-                transition: transform .5s;
+                transform: translate(0%);
+                transition: opacity .5s;
                 z-index: 11;
+                opacity: 0;
               }
               &__info {
                 z-index: 12;
@@ -1819,7 +1821,8 @@ body {
               &:hover {
                 .mask {
                   transform: translate(0%);
-                  transition: transform .5s;
+                  transition: opacity .5s;
+                  opacity: 1;
                 }
                 .is-catlist__cards-card__wrapper-body__info {
                   transform: translate(0%);
