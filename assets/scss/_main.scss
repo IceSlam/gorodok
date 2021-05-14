@@ -1113,6 +1113,9 @@ body {
             text-transform: uppercase;
             font-weight: bold;
             color: $gorodokDarkBlue;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           &__btn {
             display: flex;
@@ -1694,8 +1697,8 @@ body {
             padding: 1rem;
             border-radius: 50%;
             background: #ffffff;
-            width: 60px;
-            height: 60px;
+            width: 100px;
+            height: 100px;
             -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
             -moz-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -1703,8 +1706,8 @@ body {
             display: flex;
             transition: background .5s;
             svg {
-              max-width: 26px;
-              max-height: 26px;
+              max-width: 80px;
+              max-height: 80px;
               display: block;
               margin: 0 auto;
               path {
@@ -2577,7 +2580,7 @@ body {
               order: 2;
               text-align: right;
               .is-records__cards-square__wrapper-caption {
-                margin-left: 0;
+                margin-left: auto;
                 margin-right: 4.5rem;
               }
             }
@@ -2588,7 +2591,7 @@ body {
               order: 5;
               text-align: right;
               .is-records__cards-square__wrapper-caption {
-                margin-left: 0;
+                margin-left: auto;
                 margin-right: 4.5rem;
               }
             }
@@ -2599,6 +2602,8 @@ body {
               color: $gorodokDarkBlue;
               font-weight: bold;
               margin-left: 4.5rem;
+              min-height: 44px;
+              max-width: 50%;
             }
           }
           &__caption {

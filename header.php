@@ -33,8 +33,8 @@
                 src="<? the_field('system_logo_header', 'option'); ?>"
                 alt="Город'ОК"
                 loading="lazy"
-                width="191px"
                 height="106px"
+                width="auto"
             />
             <span>
               Рекламно-производственная компания
@@ -110,6 +110,15 @@
                       <?php endwhile; ?>
                   </ul>
                 </div>
+              </div>
+              <div class="is-navbar__contacts__item">
+                <p class="title">
+                  <i class="fab fa-viber" style="color: #C23A3A;font-size: 15px;"></i>
+                  Viber
+                </p>
+                <a href="https://viber.click/+7 (913) 353-8858" class="link" target="_blank">
+                  +7 (913) 353 88 58
+                </a>
               </div>
             </div>
           </div>
